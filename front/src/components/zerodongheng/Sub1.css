@@ -1,0 +1,90 @@
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 700px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.cont .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cont .logo {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #7ED957;
+}
+
+.cont .item {
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 변환과 그림자 효과에 대한 transition 추가 */
+}
+
+.cont .circle h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    transition: font-size 0.3s ease;
+}
+
+.cont .circle .item:hover {
+    transform: translateY(-5px); /* 위로 이동 */
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+    border-radius: 5px;
+    width: 240px;
+    height: 160px;
+
+}
+
+.cont .circle .item:hover p{
+    font-size: 26px;
+    /* transition: font-size 1.3s ease; */
+}
+
+.cont .top-left {
+    top: -40px; /* 원 위쪽으로 이동 */
+    left: -190px; /* 원 왼쪽으로 이동 */
+}
+
+.cont .top-right {
+    top: -40px; /* 원 위쪽으로 이동 */
+    right: -190px; /* 원 오른쪽으로 이동 */
+}
+
+.cont .bottom-left {
+    bottom: -40px; /* 원 아래쪽으로 이동 */
+    left: -190px; /* 원 왼쪽으로 이동 */
+}
+
+.cont .bottom-right {
+    bottom: -40px; /* 원 아래쪽으로 이동 */
+    right: -190px; /* 원 오른쪽으로 이동 */
+    
+}
+
+.cont .center {
+    z-index: 1; /* 중앙 아이템을 위로 */
+}
+
+.cont p {
+    font-size: 12px; /* 글자 크기를 약간 키움 */
+    margin: 0; /* 기본 여백 제거 */
+    color: #04079f;
+}
+

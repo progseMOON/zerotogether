@@ -1,0 +1,86 @@
+.article-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.article-meta-container {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.article-meta {
+    margin: 5px 0;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ddd; /* 구분선 색상 */
+    margin: 10px 0; /* 구분선 위아래 여백 */
+}
+
+.article-content {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* 이미지 간격 */
+}
+
+.article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.no-images {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+.action-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db; /* 버튼 배경색 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #2980b9; /* 버튼 호버 색상 */
+}
+
+
+.underline:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.arrow-right {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid black;
+    margin-left: 5px;
+}

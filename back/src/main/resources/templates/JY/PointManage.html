@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업다운 업다운</title>
+    <script>
+        const sendIt =()=> {
+        f=document.myForm;
+
+        f.action="/manage.action";
+        f.submit();
+    }
+
+    </script>
+</head>
+<body>
+    <form action="" method="post" name="myForm">
+        <label>id: <input type="text" name="pointId"/></label> <br/>
+
+        <select name="oper">
+            <option value="+" name="increm">+</option>
+            <option value="-" name="decrem">-</option>
+        </select>
+
+       <label> 입력값: <input type="text" name="updown"/></label>
+    </form>
+    
+    <button type="button" onclick="sendIt()" name="point">적용</button>
+
+</body>
+</html>

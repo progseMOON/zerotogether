@@ -1,0 +1,125 @@
+/* 공통 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* 투명한 배경 */
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #008000; /* 초록색 포인트 */
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Success Page */
+.success-page {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* 살짝 불투명한 배경 */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* 수평 및 수직 가운데 정렬 */
+  text-align: center; /* 기본적으로 텍스트를 가운데 정렬 */
+}
+
+.success-page .info {
+  font-size: 1.2em;
+  margin: 10px 0;
+  text-align: left; /* 후원 금액부터 주소까지 왼쪽 정렬 */
+}
+
+.success-page .highlight {
+  color: #008000; /* 초록색 포인트 */
+  font-weight: bold;
+}
+
+.success-page .response-message {
+  margin-top: 20px;
+  font-size: 1.4em;
+  color: #333;
+}
+
+/* 버튼 스타일 */
+.success-page .back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #008000; /* 초록색 */
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.success-page .back-btn:hover {
+  background-color: #27ae60; /* Hover effect */
+}
+
+/* Failure Page */
+.failure-page {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* 수평 및 수직 가운데 정렬 */
+  text-align: center;
+}
+
+.failure-page .info {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.failure-page .highlight {
+  color: #e74c3c; /* 실패 시 빨간색 */
+  font-weight: bold;
+}
+
+.failure-page .response-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.failure-page .response-list li {
+  margin: 10px 0;
+}
+
+/* 버튼 스타일 */
+.failure-page .back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #e74c3c; /* 실패 시 빨간색 */
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.failure-page .back-btn:hover {
+  background-color: #c0392b; /* Hover effect */
+}

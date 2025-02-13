@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const sendIt=()=> {
+            f=document.myForm
+
+            f.action="/find_ok";
+            f.submit();
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <form action="" method="post" name="myForm">
+        <div>
+            검색할 MemID: <input type="text" name="memId"/>
+
+            <button onclick="sendIt()">검색</button>
+        </div>
+    </form>
+</body>
+</html>

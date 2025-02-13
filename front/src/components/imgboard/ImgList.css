@@ -1,0 +1,65 @@
+.underline:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.arrow-right {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid black;
+    margin-left: 5px;
+}
+
+.table-container {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.table-header {
+    border-bottom: 2px solid #000; /* 아래쪽에 두꺼운 구분선 */
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.table-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.table-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse; /* 테이블 셀 간의 간격 제거 */
+}
+
+.custom-table thead th {
+    border-bottom: 2px solid #000; /* 헤더 아래쪽에 두꺼운 테두리 */
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.custom-table tbody td {
+    padding: 10px;
+    vertical-align: middle;
+    border-top: 1px solid #ddd; /* 행 사이에 얇은 구분선 */
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f9f9f9; /* 행 호버 시 배경색 변경 */
+}
+
+/* 세로 구분선 제거 */
+.custom-table thead th,
+.custom-table tbody td {
+    border-right: none;
+    border-left: none;
+}

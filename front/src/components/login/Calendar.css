@@ -1,0 +1,129 @@
+.calendar {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.calendar-header button:hover {
+    color: #007bff;
+}
+
+.calendar-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.calendar th, .calendar td {
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.calendar th {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    background-color: skyblue;
+}
+
+.calendar .day {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.calendar .empty {
+    background-color: transparent;
+}
+
+.calendar .attended {
+    background-color: #008000;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar .not-attended {
+    background-color: #999999;
+    color: white;
+}
+
+/* 일요일과 토요일 스타일 */
+.calendar tr th:first-child,
+.calendar tr td:first-child,
+.calendar tr th:last-child,
+.calendar tr td:last-child {
+    color: red;
+}
+
+.calendar-legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.legend-color.attended {
+    background-color: #008000;
+}
+
+.legend-color.not-attended {
+    background-color: #999999;
+}
+
+.legend-text {
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .calendar {
+        padding: 10px;
+    }
+
+    .calendar th, .calendar td {
+        padding: 8px;
+    }
+
+    .calendar-header h3 {
+        font-size: 16px;
+    }
+}

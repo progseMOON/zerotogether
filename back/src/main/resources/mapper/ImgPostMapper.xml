@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.zd.back.imgboard.mapper.ImgPostMapper">
+
+    <select id="maxImgPostId" resultType="int">
+        SELECT NVL(MAX(imgPostId), 0) FROM ImgPost
+    </select>
+
+    <insert id="insertImgPost" parameterType="com.zd.back.imgboard.model.ImgPost">
+        INSERT INTO ImgPost (imgPostId, memId, cate, title, content, created, auth)
+        VALUES (#{imgPostId}, #{memId}, #{cate}, #{title}, #{content}, SYSDATE, #{auth})
+    </insert>
+
+ <select id="getImgBoards" resultMap="ImgBoardResultMap">
+        SELECT * FROM (
+            SELECT ip.*, i.imgId, i.saveFileName, i.filePath,
+                   ROW_NUMBER() OVER (ORDER BY ip.imgPostId DESC) AS rnum
+            FROM ImgPost ip
+            LEFT JOIN (
+                SELECT imgPostId, imgId, saveFileName, filePath
+                FROM Img
+                WHERE imgId IN (
+                    SELECT MIN(imgId) 
+                    FROM Img 
+                    GROUP BY imgPostId
+                )
+            ) i ON ip.imgPostId = i.imgPostId
+        )
+        WHERE rnum BETWEEN #{pageStart} AND #{pageEnd}
+    </select>
+
+<select id="getDataCount" resultType="int">
+    SELECT COUNT(*) FROM ImgPost
+</select>
+
+
+
+    <select id="getImgPostById" resultMap="ImgBoardResultMap">
+        SELECT * FROM ImgPost ip
+        LEFT JOIN Img i ON ip.imgPostId = i.imgPostId
+        WHERE ip.imgPostId = #{imgPostId}
+    </select>
+
+    <update id="updateImgPost" parameterType="com.zd.back.imgboard.model.ImgPost">
+        UPDATE ImgPost
+        SET 
+            title = #{title}, 
+            content = #{content}, 
+            cate = #{cate}, 
+            created = SYSDATE
+        WHERE imgPostId = #{imgPostId}
+    </update>
+
+
+    <delete id="deleteImgPostById">
+        DELETE FROM ImgPost
+        WHERE imgPostId = #{imgPostId}
+    </delete>
+
+
+    <update id="updateAuth" parameterType="com.zd.back.imgboard.model.ImgPost">
+        UPDATE ImgPost
+        SET 
+           auth =1, 
+            authDate = SYSDATE
+        WHERE imgPostId = #{imgPostId}
+    </update>
+
+    
+<resultMap id="ImgBoardResultMap" type="com.zd.back.imgboard.model.ImgBoard">
+    <result property="imgPost.imgPostId" column="imgPostId" />
+    <result property="imgPost.memId" column="memId" />
+    <result property="imgPost.cate" column="cate" />
+    <result property="imgPost.title" column="title" />
+    <result property="imgPost.content" column="content" />
+    <result property="imgPost.created" column="created" />
+    <result property="imgPost.auth" column="auth" />
+    <result property="imgPost.authDate" column="authDate" />
+    <collection property="images" ofType="com.zd.back.imgboard.model.Img">
+        <result property="imgId" column="imgId" />
+        <result property="originalFileName" column="originalFileName" />
+        <result property="saveFileName" column="saveFileName" />
+        <result property="filePath" column="filePath" />
+        <result property="fileDate" column="fileDate" />
+    </collection>
+</resultMap>
+
+</mapper>

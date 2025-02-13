@@ -1,0 +1,87 @@
+.profile-img {
+    width: 50px; /* 프로필 이미지 크기 조정 */
+    height: auto; /* 비율 유지 */
+}
+
+textarea {
+    font-size: 14px; /* 글자 크기 조정 */
+    resize: none; /* 크기 조절 기능 비활성화 */
+}
+
+.more-button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .more-button-icon {
+    margin-left: 8px;
+    font-size: 16px;
+    position: relative;
+    top: -1px; /* 기호 위치를 미세하게 조정 */
+  }
+
+  .comment-container {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.comment-id {
+    font-size: 15px; /* 글자 크기 조정 */
+}
+
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.comment-text {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.like-count, .comment-date {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.btn-link {
+    font-size: 0.8rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.comment-box {
+    width: 80%; /* 댓글 너비를 80%로 설정하여 좁게 만듭니다 */
+    max-width: 600px; /* 최대 너비를 설정하여 너무 넓어지지 않도록 제한 */
+    background-color: #f9f9f9; /* 배경색 (선택사항) */
+    padding: 0px; /* 내부 여백 */
+    border-radius: 20px; /* 모서리를 둥글게 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 (선택사항) */
+}
+
+.comment-section {
+    width: 100%; /* 부모 요소의 너비를 100%로 설정 */
+    max-width: 600px; /* 최대 너비를 600px로 제한 */
+    padding: 20px; /* 내부 여백 추가 */
+
+}

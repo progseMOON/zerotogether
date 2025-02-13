@@ -1,0 +1,82 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.7'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.zd'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(8)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1'
+	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.3.1'
+
+	//2024-10-14 조준영 추가
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+	//2024-10-17 정윤재 추가 - 웹 사이트 크롤링 관련.
+	implementation 'org.jsoup:jsoup:1.16.1' // Jsoup 최신 버전 추가
+
+	//2024-10-16 정우준 추가
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'//JWT
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+	//2024-10-17 정우준 추가
+	implementation 'net.nurigo:sdk:4.2.7'
+
+	//2024-10-21 정윤재 추가 - 네이버 api db 안 정규화 표현식 제거용
+	implementation 'org.apache.commons:commons-text:1.9'
+
+	//2024-10-22 정윤재 추가 - rss 피딩 xml 리딩 관련
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.15.0'
+
+	//2024-10-24 조준영 결제api의존 추가
+	implementation 'com.github.iamport:iamport-rest-client-java:0.2.21'
+
+	// 주석 처리: JPA 스타터 제거하여 MyBatis와의 충돌 방지
+	// implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	//2024-10-26 문승은 추가
+    // implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+
+	//2024-10-31 정우준 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+	//2024-11-05 타임리프 추가
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	//2024-11-10 정우준 react-quill 에디터 이미지 처리 기능추가
+	implementation 'net.coobird:thumbnailator:0.4.14'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

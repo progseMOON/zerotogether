@@ -1,0 +1,64 @@
+/* src/components/CoverPage.css */
+
+/* 기존 스타일 유지 */
+
+.cover-container {
+    position: fixed; /* 화면에 고정하여 위치 고정 */
+    top: 0;          /* 화면 상단에 맞춤 */
+    left: 0;         /* 화면 왼쪽에 맞춤 */
+    width: 100vw;    /* 전체 너비 */
+    height: 100vh;   /* 전체 높이 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 */
+    display: flex;    /* Flexbox로 중앙 정렬 */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;      /* 다른 요소들 위에 표시되도록 설정 */
+}
+
+.bg-video {
+    position: absolute; /* 비디오를 커버 컨테이너에 맞춤 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 비디오 비율 유지 */
+    transition: opacity 1s ease; /* 비디오 전환 시 애니메이션 추가 */
+}
+
+.cover-content {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+}
+
+.cover-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 추가 */
+}
+
+.cover-content button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 배경색 변화 및 크기 변화 추가 */
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+}
+
+.cover-content button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05); /* 호버 시 버튼 크기 증가 */
+}
+
+/* 페이드 효과 클래스 추가 */
+.fade-out {
+    opacity: 0; /* 비디오가 사라질 때 */
+}
+
+.fade-in {
+    opacity: 1; /* 비디오가 나타날 때 */
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.login.mapper.MemberMapper">
+
+    <insert id="insertMember" parameterType="com.zd.back.login.model.Member">
+    INSERT INTO member (memId, pwd, memName, email, tel, post, addr1, addr2, termsAccepted, privacyAccepted, role)
+    VALUES (#{memId}, #{pwd}, #{memName}, #{email}, #{tel}, #{post}, #{addr1}, #{addr2},
+            DECODE(#{termsAccepted}, 'true', 1, 0),
+            DECODE(#{privacyAccepted}, 'true', 1, 0),
+            #{role})
+    </insert>
+
+    <select id="selectMemberById" parameterType="string" resultType="com.zd.back.login.model.Member">
+    SELECT memId, pwd, memName, email, tel, post, addr1, addr2,
+           CASE WHEN termsAccepted = 1 THEN 'true' ELSE 'false' END as termsAccepted,
+           CASE WHEN privacyAccepted = 1 THEN 'true' ELSE 'false' END as privacyAccepted,
+           role
+    FROM member
+    WHERE memId = #{memId}
+    </select>
+
+    <update id="updateMember" parameterType="com.zd.back.login.model.Member">
+    UPDATE member
+    SET pwd = #{pwd},
+        memName = #{memName},
+        email = #{email},
+        tel = #{tel},
+        post = #{post},
+        addr1 = #{addr1},
+        addr2 = #{addr2},
+        termsAccepted = DECODE(#{termsAccepted}, 'true', 1, 0),
+        privacyAccepted = DECODE(#{privacyAccepted}, 'true', 1, 0),
+        role = #{role}
+    WHERE memId = #{memId}
+    </update>
+
+    <delete id="deleteMember" parameterType="string">
+        DELETE FROM member WHERE memId = #{memId}
+    </delete>
+
+    <select id="findIdByEmail" parameterType="string" resultType="string">
+        SELECT memId FROM member WHERE email = #{email}
+    </select>
+
+    <select id="countByMemId" resultType="int" parameterType="String">
+        SELECT COUNT(*) FROM member WHERE memId = #{memId}
+    </select>
+
+    <select id="countByEmail" resultType="int" parameterType="String">
+        SELECT COUNT(*) FROM member WHERE email = #{email}
+    </select>
+
+    <update id="updateMemberRole">
+    UPDATE member
+    SET role = #{role}
+    WHERE memId = #{memId}
+    </update>
+
+
+    <select id="selectAllMembers" resultType="com.zd.back.login.model.Member">
+        SELECT memId, memName, email, tel, role
+        FROM member
+    </select>
+
+    <select id="searchMembers" parameterType="map" resultType="com.zd.back.login.model.Member">
+    SELECT * FROM (
+        SELECT m.*, ROWNUM rn FROM (
+            SELECT * FROM member
+            <where>
+                <if test="searchTerm != null and searchTerm != ''">
+                    AND (memId LIKE '%'||#{searchTerm}||'%' OR memName LIKE '%'||#{searchTerm}||'%' OR email LIKE '%'||#{searchTerm}||'%')
+                </if>
+            </where>
+            ORDER BY memId
+        ) m
+    )
+    WHERE rn BETWEEN (#{page} - 1) * #{limit} + 1 AND #{page} * #{limit}
+</select>
+
+<select id="countMembers" parameterType="map" resultType="int">
+    SELECT COUNT(*) FROM member
+    <where>
+        <if test="searchTerm != null and searchTerm != ''">
+            AND (memId LIKE '%'||#{searchTerm}||'%' OR memName LIKE '%'||#{searchTerm}||'%' OR email LIKE '%'||#{searchTerm}||'%')
+        </if>
+    </where>
+</select>
+
+
+
+</mapper>

@@ -1,0 +1,89 @@
+.underline:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.arrow-right {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid black;
+    margin-left: 5px;
+}
+
+.table-container {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.table-header {
+    border-bottom: 2px solid #000; /* 아래쪽에 두꺼운 구분선 */
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.table-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.table-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse; /* 테이블 셀 간의 간격 제거 */
+    table-layout: fixed; /* 고정된 테이블 레이아웃 */
+}
+
+.custom-table tbody th {
+    width: 150px; /* 원하는 너비로 설정 */
+    background-color: #e0f0ff; /* 기존 th 스타일을 유지 */
+    text-align: left;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.custom-table tbody td {
+    padding: 10px;
+    vertical-align: middle;
+    border-top: 1px solid #ddd; /* 행 사이에 얇은 구분선 */
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f9f9f9; /* 행 호버 시 배경색 변경 */
+}
+
+/* 세로 구분선 제거 */
+.custom-table thead th,
+.custom-table tbody td {
+    border-right: none;
+    border-left: none;
+}
+
+.del-span {
+    position: relative;
+    color: #666; /* 원하는 텍스트 색상 */
+    text-decoration: line-through;
+}
+
+.ql-container {
+    min-height: 300px;
+    max-height: 350px; /* 편집기 내부 높이 최대값 조정 */
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.ql-editor {
+    padding: 10px;
+    font-family: 'Arial', sans-serif; /* 원하는 폰트로 변경 */
+    font-size: 14px; /* 원하는 크기로 변경 */
+    letter-spacing: 0.5px; /* 글자 간격 조정 (예: 0.5px) */
+    line-height: 1.8; /* 줄 간격 조정 (예: 1.8) */
+}

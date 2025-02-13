@@ -1,0 +1,17 @@
+.info-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #2DB400; /* 선 색상 */
+    border-radius: 10px; /* 둥근 모서리 */
+  }
+
+  .info-box label {
+    width: 100%;
+  }
+
+  .info-box span,
+  .info-box label.col-form-label {
+    color: #333; /* 텍스트 색상 */
+  }

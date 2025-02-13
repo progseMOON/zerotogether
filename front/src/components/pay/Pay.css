@@ -1,0 +1,99 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.pay-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Step 컨테이너 - flexbox 사용 */
+  .step-container {
+    display: flex;
+    justify-content: space-between;  /* 각 step을 고르게 분배 */
+    width: 80%;
+    max-width: 600px;  /* 원하는 최대 너비 */
+    margin: 20px auto;
+    border: solid 1px;
+    border-color: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 0%;
+  }
+
+.amount-select {
+    margin-bottom: 20px;
+    border-radius: 1px;
+}
+
+.amount-select label {
+    margin-left: 10px;
+}
+
+.input-group {
+    
+    margin-bottom: 15px;
+
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev-step-btn {
+    background-color: #f0f0f0;
+    margin-right: 10px;
+}
+
+.next-step-btn, .pay-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.payment-info {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.pay-container .step {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pay-container .step.active {
+    background-color: #4CAF50; /* 강조된 색상 */
+    color: white;
+    font-weight: bold;
+  }
+  

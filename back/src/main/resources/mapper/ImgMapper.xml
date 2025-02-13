@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.imgboard.mapper.ImgMapper">
+
+    <select id="maxImgId" resultType="int">
+        SELECT NVL(MAX(imgId), 0) FROM Img
+    </select>
+<insert id="saveImg" parameterType="com.zd.back.imgboard.model.Img">
+    INSERT INTO Img (imgId, imgPostId, originalFileName, saveFileName, filePath, fileDate)
+    VALUES (img_seq.NEXTVAL, #{imgPostId}, #{originalFileName}, #{saveFileName}, #{filePath}, SYSDATE)
+</insert>
+
+    <select id="getImagesByPostId" resultType="com.zd.back.imgboard.model.Img">
+        SELECT * FROM Img WHERE imgPostId = #{imgPostId}
+    </select>
+
+   <delete id="deleteImagesByPostId">
+        DELETE FROM Img
+        WHERE imgPostId = #{imgPostId}
+    </delete>
+
+    <delete id="deleteBySaveFileName">
+        DELETE FROM img
+        WHERE saveFileName = #{saveFileName}
+    </delete>
+
+
+</mapper>

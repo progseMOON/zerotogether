@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zd.back.notice.mapper.NoticeMapper">
+
+    <insert id="insertNotice" parameterType="com.zd.back.notice.model.NoticeDTO">
+    INSERT INTO notice (notice_id, title, content, author, created_at)
+    VALUES (notice_seq.NEXTVAL, #{title}, #{content, jdbcType=CLOB}, #{author, jdbcType=VARCHAR}, SYSTIMESTAMP)
+</insert>
+
+    <select id="getNoticeById" resultType="com.zd.back.notice.model.NoticeDTO">
+    SELECT notice_id as noticeId, title, content, author, created_at as createdAt, updated_at as updatedAt, views
+    FROM notice
+    WHERE notice_id = #{noticeId}
+    </select>
+
+    <select id="getAllNotices" resultType="com.zd.back.notice.model.NoticeDTO">
+        SELECT * FROM notice ORDER BY created_at DESC
+    </select>
+
+    <update id="updateNotice" parameterType="com.zd.back.notice.model.NoticeDTO">
+        UPDATE notice
+        SET title = #{title}, content = #{content, jdbcType=CLOB}, updated_at = SYSTIMESTAMP
+        WHERE notice_id = #{noticeId}
+    </update>
+
+    <delete id="deleteNotice" parameterType="Long">
+        DELETE FROM notice WHERE notice_id = #{noticeId}
+    </delete>
+
+    <select id="getNoticesPaged" resultType="com.zd.back.notice.model.NoticeDTO">
+        SELECT * FROM (
+            SELECT a.*, ROWNUM rn FROM (
+                SELECT * FROM notice ORDER BY created_at DESC
+            ) a WHERE ROWNUM &lt;= #{offset} + #{limit}
+        ) WHERE rn > #{offset}
+    </select>
+
+    <select id="countNotices" resultType="int">
+        SELECT COUNT(*) FROM notice
+    </select>
+
+    <update id="incrementViews" parameterType="Long">
+        UPDATE notice SET views = views + 1 WHERE notice_id = #{noticeId}
+    </update>
+
+</mapper>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- SDK설치 -->
+    <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+    <script defer type="text/javascript" src="js/payment.js"></script>
+    <script>
+        
+        function requestPay() {
+            IMP.init("imp51775781")
+            console.log("test")
+            IMP.request_pay(
+                
+            {
+                pg: "html5_inicis", // 결제 대행사 코드.상점ID(위에 채널추가 할 때 설정한거)
+                pay_method: "card", // 결제 방법
+                merchant_uid: `payment-${crypto.randomUUID()}`, // 주문 고유 번호
+                name: "노르웨이 회전 의자", // 상품 이름
+                amount: 64900, // 상품 가격
+                // 여기서부터 필수는 아님
+                buyer_email: "gildong@gmail.com",
+                buyer_name: "홍길동",
+                buyer_tel: "010-4242-4242",
+                buyer_addr: "서울특별시 강남구 신사동",
+                buyer_postcode: "01181",
+            },
+            function (response) {
+                // 결제 종료 시 호출되는 콜백 함수
+                // 인증
+                // response.imp_uid 값으로 결제 단건조회 API를 호출하여 결제 결과를 확인하고,
+                // 결제 결과를 처리하는 로직을 작성합니다.
+            },
+            );
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="requestPay()">결제하기2</button>
+
+</body>
+</html>

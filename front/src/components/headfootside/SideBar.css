@@ -1,0 +1,17 @@
+.main-layout {
+    display: flex; /* flexbox 레이아웃 사용 */
+    height: 100vh; /* 화면 전체 높이 */
+}
+
+.sidebar {
+    width: 20%; /* 사이드바의 너비를 20%로 설정 */
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100%; /* 세로 높이 꽉 채우기 */
+}
+
+.content {
+    width: 80%; /* 나머지 80%는 메인 바디가 차지 */
+    padding: 20px;
+    background-color: #fff;
+}

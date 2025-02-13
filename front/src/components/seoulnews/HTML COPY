@@ -1,0 +1,619 @@
+<div id="subContainer">
+
+<style type="text/css">
+input[type="submit"]:focus, input[type="submit"]:hover {
+	border: 2px solid red !important;
+}
+</style>
+
+
+
+
+	
+	<ul class="tabBar col6 board notUsed">
+					<li class="active"><a href="javascript:fn_go('');" title="선택됨" class="initTab">전체</a><span class="arrow"></span></li>
+					<li><a href="javascript:fn_go('24000100');">공지</a><span class="arrow"></span></li>
+					<li><a href="javascript:fn_go('24000200');">채용</a><span class="arrow"></span></li>
+					<li><a href="javascript:fn_go('24000300');">입찰</a><span class="arrow"></span></li>
+					<li><a href="/site/keiti/rnd/selectRndNoticeList.do">R&amp;D</a><span class="arrow"></span></li>
+					<li><a href="javascript:fn_go('24000500');">공시송달</a><span class="arrow"></span></li>
+					
+</ul>
+
+
+
+
+
+
+
+
+	
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+		
+
+<form id="BbsContentFVo" name="BbsContentFVo" action="/site/keiti/ex/board/List.do?cbIdx=277" method="post">
+<input id="pageIndex" name="pageIndex" type="hidden" value="1">
+<input id="searchExt1" name="searchExt1" type="hidden" value="">
+
+
+	
+	
+<h3 class="hidden_only">
+
+	
+	   
+	   
+	   
+	   
+	   
+	   
+  
+       
+	 
+      
+   
+      	
+	
+   
+	전체
+	
+	
+	
+	
+			
+   
+   
+   
+		
+
+</h3>	
+	<div class="bbsSearch">	
+			<ul>
+				
+					
+					
+						<li class="listCount">전체 <em>6,518건</em>, 페이지 <b>1</b>/ 652</li>
+					
+				
+				<li class="searchArea">
+				
+				<select id="searchCondition" name="searchCondition" title="조건선택">
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<option value="titlecontents">전체</option>				
+				
+				
+				
+					<option value="subCont">제목</option>
+				
+					<option value="clobCont">내용</option>
+				
+				</select>
+				<input id="searchKeyword" name="searchKeyword" title="검색어입력" class="w30" type="text" value="">
+				
+				
+				
+				
+				 
+	 			<input type="submit" value="검색" title="검색" class="form-btn type1" onclick="doBbsContentFPag('1');return false;">
+				<!-- 
+				<input type="button" value="전체목록" title="전체목록" class="form-btn type2" onclick="doBbsContentFPagFresh(); return false;">
+				 -->
+				
+				
+				</li>
+			</ul>
+		</div><!-- //search -->
+		
+	<br>
+	
+		
+		
+
+
+
+
+
+
+
+
+
+		
+		<div class="thumb">
+					<ul class="list col5">
+						
+						<li>
+							
+							
+							
+							
+							
+							<div class="cate cateGreen">
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37875" onclick="doBbsContentFView('37875');return false;">
+								<span class="cateName">
+								입찰</span>
+								
+								
+								
+								
+								<span class="date">2024-10-30</span>
+								<span class="subject">[기술평가결과]환경보건이용권 온라인몰 구축ㆍ운영(장기계속 1차/2차) 용역 기술평가 결과 알림</span>
+								<span class="text">
+															
+										
+									○ 조달청 입찰공고 번호 :20241004885-00환경보건이용권 온라인몰 구축ㆍ운영(장기계속 1차/2차) 용역제안서 기술평가 결과를 붙임과 같이 안내드립니다.자세한 사항은 조달청
+								</span></a>
+							</div>
+						</li>
+						
+						<li>
+							
+							
+							
+							<div class="cate cateNavy">
+							
+							
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37874" onclick="doBbsContentFView('37874');return false;">
+								<span class="cateName">
+								공지</span>
+								
+								
+								
+								
+								<span class="date">2024-10-29</span>
+								<span class="subject">제20회 ESG ON 세미나 개최 안내('24.11.20.(수), 15:00~16:30)</span>
+								<span class="text">
+															
+										
+									한국환경산업기술원은 최근 급속히 발전하고 있는 ESG 분야의 최신 동향을 공유하고,
+
+앞으로의 발전방안을 모색하기 위한 온라인 세미나를 매월 개최하고 있습니다.
+
+
+
+&amp;
+								</span></a>
+							</div>
+						</li>
+						
+						<li>
+							
+							
+							
+							<div class="cate cateNavy">
+							
+							
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37873" onclick="doBbsContentFView('37873');return false;">
+								<span class="cateName">
+								공지</span>
+								
+								
+								
+								
+								<span class="date">2024-10-28</span>
+								<span class="subject">신기술인증 신청내용 [㈜한수나텍/㈜한수도로산업]</span>
+								<span class="text">
+															
+										
+									한국환경산업기술원 공고 제2024-135호
+
+신기술인증 신청내용 공고
+
+「환경기술 및 환경산업 지원법」 제7조제1항 및 같은 법 시행령 제18조에 따라 신기술인증을 신청한 
+								</span></a>
+							</div>
+						</li>
+						
+						<li>
+							
+							
+							
+							<div class="cate cateNavy">
+							
+							
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37849" onclick="doBbsContentFView('37849');return false;">
+								<span class="cateName">
+								공지</span>
+								
+								
+								
+								
+								<span class="date">2024-10-23</span>
+								<span class="subject">[알림]환경표지 인증취소 알림(취소일:'24.10.10.)</span>
+								<span class="text">
+															
+										
+									환경부 공고(제2024-651호)와 관련하여
+붙임의 제품이 환경표지 인증취소 되었음을 알려드립니다.
+
+가. 인증취소 근거: 「환경기술 및 환경산업 지원법」제23조
+
+나. 
+								</span></a>
+							</div>
+						</li>
+						
+						<li>
+							
+							
+							
+							<div class="cate cateNavy">
+							
+							
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37845" onclick="doBbsContentFView('37845');return false;">
+								<span class="cateName">
+								공지</span>
+								
+								
+								
+								
+								<span class="date">2024-10-21</span>
+								<span class="subject">2024-제5차 녹색매장 지정 신청 및 특화된 녹색매장 개선비용 지원 공고</span>
+								<span class="text">
+															
+										
+									2024-제5차 녹색매장 지정 신청 및 특화된 녹색매장 개선비용 지원 공고
+
+1. 녹색매장 지정제도
+- 방문고객의 친환경적인 소비 · 생활을 유도하고 , 녹색제품
+								</span></a>
+							</div>
+						</li>
+						
+						<li>
+							
+							
+							
+							<div class="cate cateNavy">
+							
+							
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37843" onclick="doBbsContentFView('37843');return false;">
+								<span class="cateName">
+								공지</span>
+								
+								
+								
+								
+								<span class="date">2024-10-21</span>
+								<span class="subject">2024년도 환경성적 산정 지원 사업 참여기업 모집 공고</span>
+								<span class="text">
+															
+										
+									한국환경산업기술원 공고 제2024-133호
+
+
+2024년도 환경성적 산정 지원 사업 참여기업 모집 공고
+
+
+우리원은 환경성 제고를 위해 제품(서비스)의 생산, 유통, 사
+								</span></a>
+							</div>
+						</li>
+						
+						<li>
+							
+							
+							
+							<div class="cate cateNavy">
+							
+							
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37840" onclick="doBbsContentFView('37840');return false;">
+								<span class="cateName">
+								공지</span>
+								
+								
+								
+								
+								<span class="date">2024-10-18</span>
+								<span class="subject">[기간 연장] 「환경보건·화학안전망 구축 핵심기술개발사업(가칭)」 기술수요조사(~10.25.)</span>
+								<span class="text">
+															
+										
+									
+	
+		
+			환경부와 한국환경산업기술원에서는 기존·신규 및 국제규제 화학물질 대상의 유해성 정보를 신속하게 파악하고,
+			나아가 원천저감을 위한 핵심기술개
+								</span></a>
+							</div>
+						</li>
+						
+						<li>
+							
+							
+							
+							<div class="cate cateNavy">
+							
+							
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37830" onclick="doBbsContentFView('37830');return false;">
+								<span class="cateName">
+								공지</span>
+								
+								
+								
+								
+								<span class="date">2024-10-17</span>
+								<span class="subject">[안내] 기술보호 첫걸음, 비밀유지계약 체결</span>
+								<span class="text">
+															
+										
+									
+중소벤처기업부와 대중소기업농어업협력재단에서
+중소기업 기술보호를 위해추진하는 제도를 안내드립니다.
+
+기술침해 관련 소송에서 중소기업이 이길 수 없는 가장 큰 이유가 기술자료
+								</span></a>
+							</div>
+						</li>
+						
+						<li>
+							
+							
+							
+							<div class="cate cateNavy">
+							
+							
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37839" onclick="doBbsContentFView('37839');return false;">
+								<span class="cateName">
+								공지</span>
+								
+								
+								
+								
+								<span class="date">2024-10-17</span>
+								<span class="subject">’24년도 녹색산업 해외 수출 촉진을 위한 녹색무역상사 3차 모집 공고</span>
+								<span class="text">
+															
+										
+									
+								</span></a>
+							</div>
+						</li>
+						
+						<li>
+							
+							
+							
+							<div class="cate cateNavy">
+							
+							
+							
+							
+														
+							
+								
+								
+								
+								
+								<a href="/site/keiti/ex/board/View.do?cbIdx=277&amp;bcIdx=37827" onclick="doBbsContentFView('37827');return false;">
+								<span class="cateName">
+								공지</span>
+								
+								
+								
+								
+								<span class="date">2024-10-16</span>
+								<span class="subject">제24차 환경정책심포지엄 개최 안내</span>
+								<span class="text">
+															
+										
+									
+
+[행사 개요]
+
+
+
+- 행사명: 제24회 환경정책심포지엄 &lt;기후위기시대의 국제통상 관련 환경이슈 우리의 대응전략은?&gt;
+
+
+
+- 일시: 2024년 1
+								</span></a>
+							</div>
+						</li>
+						
+						
+							
+						
+					</ul>
+				
+		</div>
+		
+		<!--paginate -->
+		<div class="paging">
+			<a href="?pageIndex=1" onclick="doBbsContentFPag(1);return false; " class="first" title="처음">처음</a><a href="?pageIndex=1" onclick="doBbsContentFPag(1);return false; " class="prev" title="이전">이전</a><a class="active" title="1">1</a>&nbsp;<a href="?pageIndex=2" onclick="doBbsContentFPag(2);return false; " class="num" title="2">2</a>&nbsp;<a href="?pageIndex=3" onclick="doBbsContentFPag(3);return false; " class="num" title="3">3</a>&nbsp;<a href="?pageIndex=4" onclick="doBbsContentFPag(4);return false; " class="num" title="4">4</a>&nbsp;<a href="?pageIndex=5" onclick="doBbsContentFPag(5);return false; " class="num" title="5">5</a>&nbsp;<a href="?pageIndex=6" onclick="doBbsContentFPag(6);return false; " class="num" title="6">6</a>&nbsp;<a href="?pageIndex=7" onclick="doBbsContentFPag(7);return false; " class="num" title="7">7</a>&nbsp;<a href="?pageIndex=8" onclick="doBbsContentFPag(8);return false; " class="num" title="8">8</a>&nbsp;<a href="?pageIndex=9" onclick="doBbsContentFPag(9);return false; " class="num" title="9">9</a>&nbsp;<a href="?pageIndex=10" onclick="doBbsContentFPag(10);return false; " class="num" title="10">10</a>&nbsp;<a href="?pageIndex=11" onclick="doBbsContentFPag(11);return false; " class="next" title="다음">다음</a><a href="?pageIndex=652" onclick="doBbsContentFPag(652);return false; " class="last" title="마지막">마지막</a>
+
+		</div>
+		<!--//paginate -->
+			
+		
+		
+		
+	
+	
+</form>
+
+
+
+
+
+
+
+	
+		<div class="satisfy type3" style="margin-bottom: -70px;">
+			<div class="shadow">
+				<ul class="charge">
+					<li class="icon1"><b>담당부서: </b>	인재경영실</li>
+					<li class="icon3"><b>전화번호: </b>02-2284-1139</li>
+				</ul>
+			</div>
+		</div>
+
+
+
+
+<style>
+.btn-focus:focus, .btn-focus:hover {
+	border: 2px solid red;
+}
+</style>
+
+<script type="text/javascript">
+
+function fn_update() {
+	
+	var comchk = -1;
+	var comfrm = document.fSatisfaction;	
+	for(var c=0;c < comfrm.recommendScore.length; c++){
+	
+			if(comfrm.recommendScore[c].checked) {
+		   comchk = c;	
+		}
+	}
+	
+	if(comchk == -1){
+		alert("만족도 값을 선택하세요");
+		return ;
+	} else {
+		
+		var recommendScore = "5" ;
+		if(comchk == 0) {recommendScore = 5; }
+		if(comchk == 1) {recommendScore = 4; }
+		if(comchk == 2) {recommendScore = 3; }
+		if(comchk == 3) {recommendScore = 2; }
+		if(comchk == 4) {recommendScore= 1; }	
+		
+		
+		var pageDetail = document.fSatisfaction.pageDetail.value;
+		var recommendText =  "";
+		
+		var pageNm =  document.getElementById("pageNm").value;
+		var strArg = "pageDetail=" +pageDetail + "&recommendText=" +recommendText + "&recommendScore=" +recommendScore  + "&pageNm=" +pageNm ;
+		
+		$.ajax({
+			url : "/site/keiti/user/insertSatisfaction.do",
+			type : "POST",
+			data : strArg,
+			dataType : "html",
+				success:function(object){
+					
+					$("input[name=recommendScore]").prop("checked",false);
+					alert("만족도 등록이 완료되었습니다. 감사합니다.!");
+				}, 		 
+			error:function(xhr,status,error){alert(status);}
+		});
+	
+		
+	}	
+}
+</script>
+</div>

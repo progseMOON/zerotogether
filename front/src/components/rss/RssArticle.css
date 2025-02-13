@@ -1,0 +1,140 @@
+.rss-article-wrap {
+
+}
+
+.rss-article-title {
+
+    padding: 30px;
+	border-bottom: 1px solid rgb(207, 205, 205);
+	font-size: 22px;
+
+}
+
+.rss-article-date {
+
+    display: flex;
+    justify-content: space-between; /* 좌우 끝에 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 15px;
+    border-bottom: 1px solid rgb(207, 205, 205);
+
+}
+
+.rss-article-date p {
+    margin: 0;
+}
+
+.rss-article-download {
+
+    padding: 15px;
+    border-bottom: 1px solid rgb(207, 205, 205);
+}
+
+.rss-article-download ul{
+
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.rss-article-content {
+    padding: 15px;
+    border-bottom: 1px solid;
+    min-height: 300px;
+}
+
+.rss-list-button {
+
+
+}
+
+.rss-list-button a {
+    display: inline-block; /* 버튼 모양을 위한 인라인 블록 */
+    padding: 10px 20px; /* 버튼 내부 여백 */
+    background-color: #008000; /* 버튼 배경색 */
+    color: white; /* 텍스트 색상 */
+    border: none; /* 기본 테두리 제거 */
+    border-radius: 5px; /* 둥근 모서리 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    font-weight: bold; /* 텍스트 굵게 */
+    cursor: pointer; /* 커서를 버튼 모양으로 */
+    transition: background-color 0.3s ease; /* 배경색 전환 효과 */
+	margin: 15px;
+	text-decoration: none;
+	color: white;
+}
+
+.rss-article-NewsGroup {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    max-width: 100px;
+    max-height: 40px;
+    left: 0;
+    top: 0;
+    margin-bottom: 0;
+    background-color: #7f8c8d;
+  }
+
+.rss-download-img {
+    width: 20px;
+    margin: 3px;
+}
+
+.rss-list-prev-next {
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝으로 정렬 */
+    align-items: center; /* 세로 정렬 */
+    margin: 20px 0; /* 위아래 여백 */
+	max-height: 60px;
+}
+
+.rss-list-prev-next p {
+    padding: 5px;
+}
+
+.rss-list-prev-next a {
+    display: flex;
+    align-items: center; /* 이미지와 텍스트를 수직 중앙 정렬 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: #333; /* 텍스트 색상 */
+}
+
+.rss-prev-text {
+	text-align: left;
+}
+
+.rss-next-text {
+	text-align: right;
+}
+
+.prev-img {
+	height: 50px; /* 이미지 크기 조절 */
+    width: auto; /* 비율 유지 */
+    margin-right: 10px; /* 이미지와 텍스트 사이의 간격 */
+}
+
+.next-img {
+	height: 50px; /* 이미지 크기 조절 */
+    width: auto; /* 비율 유지 */
+    margin-left: 10px; /* 이미지와 텍스트 사이의 간격 */
+}
+
+.rss-list-prev-next div {
+    display: flex;
+    flex-direction: column; /* 텍스트 세로 정렬 */
+    justify-content: center; /* 텍스트 중앙 정렬 */
+}
+
+.rss-list-prev-next div p {
+    margin: 0; /* p 태그 기본 여백 제거 */
+    line-height: 1.2; /* 텍스트 간격 조정 */
+}
+
+.rss-list-prev-next a:hover {
+    color: #007bff; /* 링크 hover 색상 변경 */
+    transition: color 0.3s; /* 부드러운 전환 효과 */
+}
