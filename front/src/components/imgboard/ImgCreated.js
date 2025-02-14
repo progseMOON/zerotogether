@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../login/context/AuthContext';
 
+// created & updated
+
+
 const ImgCreated = () => {
     const navigate = useNavigate(); // navigate 훅 추가
     const location = useLocation();
