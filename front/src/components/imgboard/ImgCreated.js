@@ -104,6 +104,7 @@ const ImgCreated = () => {
         setContent('');
     };
 
+     //=====================================================================================   
     //파일선택
     const handleImageChange = (index, evt) => {
         const file = evt.target.files[0];
