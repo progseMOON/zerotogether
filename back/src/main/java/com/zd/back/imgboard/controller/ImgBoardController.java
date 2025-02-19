@@ -20,6 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 //수정시 파일 업로드 부분 제외하고 text만 되도록 함 
 // ReactQuill.Quill.import('이름')을 위해 복사함 (-)
+// 동기화 안되더라도 가능 한지 확인 필요 (-) 
 
 
 @RestController
