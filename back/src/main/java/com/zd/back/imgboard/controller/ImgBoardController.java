@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 
 //수정시 파일 업로드 부분 제외하고 text만 되도록 함 
+// ReactQuill.Quill.import('이름')을 위해 복사함 (-)
 
 
 @RestController
@@ -26,12 +27,10 @@ import org.springframework.web.multipart.MultipartFile;
 @RequiredArgsConstructor  //의존성 주입 위함 
 public class ImgBoardController {
 
-
     private final ImgPostService imgPostService;
     private final ImgService imgService;
     private final ImgManagerService imgManagerService;
     //파일 업로드 위한 메소드는 ImgManagerService.java로 옮김  
-
 
     @PostMapping("/created")
     @Transactional
