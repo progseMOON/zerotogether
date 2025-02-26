@@ -122,7 +122,7 @@ const ImgCreated = () => {
         setImagePreviews(newPreviews);
     };
 
-    //선택파일 취소 
+    //선택파일 취소 F
     const handleImageRemove = (index) => {
         const newImages = [...images];
         const newPreviews = [...imagePreviews];
