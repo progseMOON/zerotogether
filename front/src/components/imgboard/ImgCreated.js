@@ -173,9 +173,8 @@ const ImgCreated = () => {
         }
     };
 
-    
     const handleUpdateSubmit = async (evt) => {
-        evt.preventDefault(); // 폼 제출시 새로고침 방지 
+        evt.preventDefault();
         const nonEmptyImages = images.filter(img => img !== null);
         const existingImagesCount = imagePreviews.filter(preview => preview !== null).length;
 
@@ -238,7 +237,7 @@ const ImgCreated = () => {
         );
     }
 
-
+    
     return (
         <div className="container" style={{ maxWidth: "900px" }}>
             <div className="card mb-4">
@@ -273,7 +272,7 @@ const ImgCreated = () => {
                         <div className="row mb-3" style={{ borderBottom: '1px solid #dee2e6' }}>
                             <div className="col-2 bg-light py-2">내용</div>
                             <div className="col-10 py-2">
-                                <textarea                                
+                                <textarea 
                                     value={content} 
                                     onChange={(evt) => setContent(evt.target.value)} 
                                     ref={contentRef} 
