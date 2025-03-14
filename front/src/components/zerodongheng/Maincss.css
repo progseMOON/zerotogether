@@ -1,0 +1,203 @@
+.zero-waste-intro {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    /* background-color: #f8f9fa; */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f1f9eb;  /* 부드러운 배경색 */
+    padding: 10px 25px 10px 25px;
+  }
+  
+  .zero-waste-intro .highlight-box {
+    padding: 1.5em;
+    background-color: #f1f9eb;
+    border: 1px solid #8fc7a5;
+    border-radius: 10px;
+    margin-bottom: 1em;
+  }
+
+  .zero-waste-intro h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .zero-waste-intro h3 {
+    color: #555;
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+  .zero-waste-intro p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    font-size: 1.45em;
+    letter-spacing: -0.05em;
+  }
+  
+  .zero-waste-intro ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .zero-waste-intro li {
+    margin: 5px 0;
+  }
+  
+  .zero-waste-intro li strong {
+    color: #2c3e50;
+  }
+  
+  .zero-waste-intro .left-align {
+    text-align: left; /* 텍스트를 오른쪽 정렬 */
+    margin-right: 20px; /* 오른쪽 여백 추가 (필요에 따라 조정) */
+  }
+
+  .zero-waste-intro .right-align {
+    text-align: right; /* 텍스트를 오른쪽 정렬 */
+    margin-right: 20px; /* 오른쪽 여백 추가 (필요에 따라 조정) */
+  }
+
+  .image-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 이미지 간격 조정 */
+    justify-content: center;
+}
+
+.image1 {
+    width: 183px;
+    height: 386px;
+    opacity: 1; /* 기본 상태에서 보임 */
+    transition: opacity 0.5s ease-in-out;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9); */
+}
+
+.upcycle {
+    width: 100px; /* 중간 이미지 크기 */
+    height: 100px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.upcycle img {
+    width: 100%; /* upcycle 이미지가 중앙에 배치되도록 */
+    height: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    transition: 0.5s;
+}
+
+.image2 {
+    width: 183px;
+    height: 386px;
+    opacity: 0; /* 기본 상태에서 숨김 */
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.upcycle:hover  IMG{
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+.upcycle:hover ~ .image2 {
+  opacity: 1; /* 호버 시 image2 표시 */
+}
+
+/* upcycle에 마우스 호버 시 image1을 숨기고 image2를 표시 */
+.upcycle:hover  ~.image1 {
+    opacity: 0; /* 호버 시 image1 숨김 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.0);
+}
+  
+/* 'Recycling' 컴포넌트에 대한 새로운 스타일 */
+
+/* 전체 레이아웃 */
+.recycling-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f1f9eb;  /* 부드러운 배경색 */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding:10px 25px 10px 25px
+}
+
+/* 제목 스타일 */
+.recycling-container h2 {
+  color: #333;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 리사이클링 텍스트 스타일 */
+.recycling-container p {
+  font-size: 1.45em;
+  line-height: 1.6;
+  color: #666;
+  text-align: justify;
+  margin-bottom: 20px;
+  letter-spacing: -0.05em;
+}
+
+
+/* 리사이클링 관련 이미지와 텍스트 배치 */
+.recycling-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.recycling-content img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.recycling-info {
+  width: 55%;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recycling-info h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.recycling-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.recycling-info li {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.recycling-info li strong {
+  color: #4CAF50;  /* 강조된 텍스트에 그린 색상 */
+}
+
+/* 리사이클링 방법 텍스트 */
+.recycling-method h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-top: 30px;
+}
+
+.recycling-method p {
+  font-size: 1.45em;
+  line-height: 1.6;
+  color: #666;
+  text-align: justify;
+  margin-bottom: 20px;
+  letter-spacing: -0.05em;
+}

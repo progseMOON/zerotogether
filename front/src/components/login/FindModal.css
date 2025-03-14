@@ -1,0 +1,16 @@
+.find-id-modal {
+    z-index: 11;
+}
+
+.find-pwd-modal {
+    z-index: 11;
+}
+
+/* 사용자 정의 모달 z-index */
+.modal {
+    z-index: 1100 !important; /* 모달 z-index를 높게 설정 */
+}
+
+.modal-backdrop {
+    z-index: 1090 !important; /* 백드롭 z-index도 조정 */
+}

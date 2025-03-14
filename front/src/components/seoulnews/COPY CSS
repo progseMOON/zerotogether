@@ -1,0 +1,238 @@
+/* ======================================== Layout ======================================== */
+.subVisual{position:relative;height:390px;}
+.subVisual > img{display:none;}
+.subVisual > h2{display:block;width:100%;height:70px;line-height:70px;position:absolute;top:50%;margin-top:-25px;font-size:48px;color:#fff;text-align:center;}
+
+.subVisual.bg1{background:url(../../images/keiti/sub/bg_sub1.jpg) no-repeat center center;background-size:cover;}
+.subVisual.bg2{background:url(../../images/keiti/sub/bg_sub2.jpg) no-repeat center center;background-size:cover;}
+.subVisual.bg3{background:url(../../images/keiti/sub/bg_sub3.jpg) no-repeat center center;background-size:cover;}
+.subVisual.bg4{background:url(../../images/keiti/sub/bg_sub4.jpg) no-repeat center center;background-size:cover;}
+.subVisual.bg5{background:url(../../images/keiti/sub/bg_sub5.jpg) no-repeat center center;background-size:cover;}
+.subVisual.bg6{background:url(../../images/keiti/sub/bg_sub6.png) no-repeat center center;background-size:cover;}
+.subVisual.bg7{background:url(../../images/keiti/sub/bg_sub7.png) no-repeat center center;background-size:cover;}
+.subPageMove{display:block;position:absolute;top:200px;height:48px;font-size:22px;color:#fff;line-height:48px;}
+.subPageMove.prev{left:0;padding-left:60px;background:url(../../images/keiti/common/btn_sub_prev.png) no-repeat left center;border-left:1px solid #454649;}
+.subPageMove.next{right:0;padding-right:60px;background:url(../../images/keiti/common/btn_sub_next.png) no-repeat right center;border-right:1px solid #454649;}
+.subPageMove:hover{top:199px;border:1px solid #fff;}
+.subPageMove.prev:hover{padding-right:15px;background:url(../../images/keiti/common/btn_sub_prev_on.png) no-repeat left center;}
+.subPageMove.next:hover{padding-left:15px;background:url(../../images/keiti/common/btn_sub_next_on.png) no-repeat right center;}
+.subContents{position:relative;margin-top:-55px;padding:0 0 150px;}
+.subContents > .inner{min-height:400px;overflow:inherit !important;}
+
+.subContents h2 {padding-left:27px;margin-bottom:18px;font-size:18px;color:#222;}
+.subContents h3{margin-bottom:18px;font-size:26px;font-weight:600;color:#222;}
+.subContents .h3{padding-left:0;margin-bottom:18px;font-size:26px;font-weight:600;color:#222;background:none;}
+.subContents h4, .subContents .h4{margin-bottom:15px;padding-left:27px;background:url(../../images/keiti/sub/icon_h4.gif) no-repeat left 8px;line-height:145%;font-size:20px;color:#2669ad;}
+
+.subContents .h4Content{padding-left:27px;margin-bottom:32px;font-size:16px;color:#464646;line-height:145%;letter-spacing:-.5px;word-break:keep-all;}
+.subPath{position:relative;margin-bottom:70px;padding-right:165px;height:54px;border-bottom:1px solid #e9e9e9;background-color:#fff;}
+.subPath > .path{}
+.subPath > .path > div{float:left;position:relative;border-right:1px solid #e9e9e9;}
+.subPath > .path > div.home{width:54px;}
+.subPath > .path > div.deaph1,
+.subPath > .path > div.deaph2,
+.subPath > .path > div.deaph3{min-width:280px;}
+.subPath > .path > div.home > a{display:block;height:54px;line-height:54px;background:url(../../images/keiti/common/icon_home.png) no-repeat center center;text-indent:-9999px;}
+.subPath > .path > div > a{display:block;height:54px;line-height:54px;padding:0 40px 0 15px;font-size:16px;background:url(../../images/keiti/common/icon_arrow_path.png) no-repeat 90% center;}
+.subPath > .path > div > div{display:none;position:absolute;top:54px;left:-1px;right:-1px;border:1px solid #e9e9e9;border-bottom:none;background-color:#fff;z-index:9;}
+.subPath > .path > div > div.active{display:block;}
+.subPath > .path > div > div > a{display:block;height:54px;line-height:54px;padding:0 8px 0 15px;border-bottom:1px solid #e9e9e9;font-size:16px;letter-spacing:-1px;}
+.subPath > .path > div > div > a:hover{background:#f5f5f5;}
+.subPath > .direct{position:absolute;right:0;top:0;}
+.subPath > .direct > a{float:left;display:block;width:54px;height:54px;line-height:54px;border-left:1px solid #e9e9e9;background-repeat:no-repeat;background-position:center center;text-indent:-9999px;}
+.subPath > .direct > a:hover{background-color:#0c9897;}
+.subPath > .direct > a.icon_facebook{background-image:url(../../images/keiti/common/icon_sns_f.png);}
+.subPath > .direct > a.icon_twitter{background-image:url(../../images/keiti/common/icon_sns_t.png);}
+.subPath > .direct > a.icon_print{background-image:url(../../images/keiti/common/icon_print.png);}
+.subPath > .direct > a.icon_facebook:hover{background-image:url(../../images/keiti/common/icon_sns_f_on.png);}
+.subPath > .direct > a.icon_twitter:hover{background-image:url(../../images/keiti/common/icon_sns_t_on.png);}
+.subPath > .direct > a.icon_print:hover{background-image:url(../../images/keiti/common/icon_print_on.png);}
+
+#subTopInfo{margin-bottom:40px;padding:42px 42px 42px 205px;min-height:168px;box-sizing:border-box;letter-spacing:-1px;}
+#subTopInfo.bg3-4{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo3-4.png) no-repeat 66px center;}
+#subTopInfo.bg3-5{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo3-5.png) no-repeat 66px center;}
+#subTopInfo.bg3-7{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo3-7.png) no-repeat 66px center;}
+#subTopInfo.bg3-9{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo3-9.png) no-repeat 66px 30px;}
+#subTopInfo.bg3-9-4{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo3-9-4.png) no-repeat 66px 30px;}
+#subTopInfo.bg3-10{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo3-10.png) no-repeat 66px center;}
+#subTopInfo.bg4-2{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo4-2.png) no-repeat 66px center;}
+#subTopInfo.bg6-2{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo6-2.png) no-repeat 66px center;}
+#subTopInfo.bg6-3{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo6-3.png) no-repeat 66px center;}
+#subTopInfo.bg6-5{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo6-5.png) no-repeat 66px center;}
+#subTopInfo.bg6-12{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo6-12.png) no-repeat 66px center;}
+#subTopInfo.bg3-9-ipin{background:#f5f5f5;font-size:22px;color:#575757;text-align:center;}
+#subTopInfo.bg3-9-ipin img{display:inline-block;vertical-align:middle;margin-right:20px;}
+#subTopInfo.bg3-9-ipin b{display:inline-block;vertical-align:middle;font-size:22px;color:#141414;}
+#subTopInfo > b{display:block;margin-bottom:7px;font-size:22px;color:#141414;}
+#subTopInfo p{font-size:16px;color:#575757;line-height:150%;}
+#subTopInfo ul.listCon{margin-bottom:10px;}
+#subTopInfo ul.listCon > li{padding-top:1px;padding-bottom:1px;font-size:16px;color:#575757;}
+#subTopInfo .mgb10{margin-bottom:10px;}
+#subTopInfo a{display:inline-block;vertical-align:middle;margin:10px 0 10px 20px;padding:0 20px 0 45px;height:36px;border:1px solid #2669ad;color:#2669ad;text-align:center;font-size:15px;line-height:36px;}
+#subTopInfo .subTopDown{background:#fff url(../../images/keiti/sub/icon_subTopDown.png) no-repeat 20px;}
+#subTopInfo .subTopGo{background:#fff url(../../images/keiti/sub/icon_subTopGo.png) no-repeat 20px;}
+#subTopInfo .subTopGo.type2,
+#subTopInfo .subTopDown.type2{margin-left:0;}
+#subTopInfo.email{padding:35px 0;min-height:auto;background:#f5f5f5;text-align:center;}
+#subTopInfo.email .icon{display:inline-block;vertical-align:middle;margin-right:20px;width:78px;height:78px;background:url(../../images/keiti/sub/bg_subTopInfo_email.png) no-repeat;}
+#subTopInfo.email p{display:inline-block;vertical-align:middle;font-size:22px;color:#575757;}
+#subTopInfo.email p b{color:#141414;}
+.subTopInfo{margin-bottom:40px;padding:42px 42px 42px 205px;min-height:168px;background:#f5f5f5;box-sizing:border-box;letter-spacing:-1px;}
+.subTopInfo.type2{padding-left:42px;min-height:auto;}
+.subTopInfo.bg3-7{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo3-7.png) no-repeat 66px center;}
+.subTopInfo.bg3-9{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo3-9.png) no-repeat 66px center;}
+.subTopInfo.bg3-9 p{font-size:20px;color:#575757;line-height:170%; padding-top:25px; padding-left:70px;}
+.subTopInfo.bg2-1-5{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-1-5.png) no-repeat 66px center;}
+.subTopInfo.bg2-2-4{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-2-4.png) no-repeat 66px center;}
+.subTopInfo.bg2-2-5{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-2-5.png) no-repeat 66px center;}
+.subTopInfo.bg2-2-5-2{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-2-5-2.png) no-repeat 66px center;}
+.subTopInfo.bg2-3-1{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-3-1.png) no-repeat 66px center;}
+.subTopInfo.bg2-3-2{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-3-2.png) no-repeat 66px center;}
+.subTopInfo.bg2-3-2-2{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-3-2-2.png) no-repeat 66px center;}
+.subTopInfo.bg2-3-2-3{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-3-2-3.png) no-repeat 66px center;}
+.subTopInfo.bg2-3-2-4{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-3-2-4.png) no-repeat 66px center;}
+.subTopInfo.bg2-3-2-5{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-3-2-5.png) no-repeat 66px center;}
+.subTopInfo.bg2-3-3{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-3-3.png) no-repeat 66px center;}
+.subTopInfo.bg2-3-3-2{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-3-3-2.png) no-repeat 66px center;}
+.subTopInfo.bg2-3-3-3{background:#f5f5f5 url(../../images/keiti/sub/bg_subTopInfo2-3-3-3.png) no-repeat 66px center;}
+.subTopInfo > b{display:block;margin-bottom:7px;font-size:22px;color:#141414;}
+.subTopInfo p{font-size:16px;color:#575757;line-height:150%;word-break:keep-all;}
+.subTopInfo ul.listCon{margin-bottom:10px;}
+.subTopInfo ul.listCon > li{padding-top:1px;padding-bottom:1px;font-size:16px;color:#575757;}
+.subTopInfo ul.listCon > li:before{top:11px;}
+.subTopInfo .mgb10{margin-bottom:10px;}
+.subTopInfo a{display:inline-block;vertical-align:middle;margin:10px 0 10px 20px;padding:0 20px 0 45px;height:36px;border:1px solid #2669ad;color:#2669ad;font-size:15px;text-align:center;line-height:36px;}
+.subTopInfo .subTopDown{background:#fff url(../../images/keiti/sub/icon_subTopDown.png) no-repeat 20px;}
+.subTopInfo .subTopGo{background:#fff url(../../images/keiti/sub/icon_subTopGo.png) no-repeat 20px;}
+.subTopInfo .subTopGo.type2,
+.subTopInfo .subTopDown.type2{margin-left:0;}
+
+.h3Content{margin:20px 0 70px;font-size:16px;color:#464646;line-height:145%;letter-spacing:-.5px;word-break:keep-all;}
+.h3Content p{margin-bottom:10px;font-size:16px;color:#464646;line-height:145%;}
+.h3Content ul.listCon,
+.h4Content ul.listCon{margin-bottom:15px;}
+.h4Content .listCon .info{margin:10px 0;}
+.h4Content .listCon .listCon > li{padding:2px 0 2px 10px;}
+.h4Content .listCon .listCon > li:before{top:15px;}
+.grayImgBox{margin:10px 0;padding:60px 0;border:1px solid #dfdfdf;text-align:center;}
+.linkBlue{color:#2669ad;}
+.linkBlue:hover{text-decoration:underline;font-weight:600;}
+
+.grayImgBox_both{margin:10px 0;padding:60px 0;border:1px solid #dfdfdf;text-align:center;}
+.grayImgBox_both> span{display:inline-block;width:48%;}
+.grayImgBox_both> span img{max-width:100%;max-height:100%;}
+
+
+.subMainTop{position:relative;margin-bottom:30px;padding:85px 0 0 140px;height:420px;box-sizing:border-box;}
+.subMainTop.bg1{background:url(../../images/keiti/sub/bg_subMainTop1.jpg) no-repeat center center;background-size:cover;}
+.subMainTop.bg2{background:url(../../images/keiti/sub/bg_subMainTop2.jpg) no-repeat center center;background-size:cover;}
+.subMainTop.bg3{background:url(../../images/keiti/sub/bg_subMainTop3.jpg) no-repeat center center;background-size:cover;}
+.subMainTop.bg4{background:url(../../images/keiti/sub/bg_subMainTop4.jpg) no-repeat center center;background-size:cover;}
+.subMainTop.bg5{background:url(../../images/keiti/sub/bg_subMainTop5.png) no-repeat center center;background-size:cover;}
+.subMainTop .slogan{display:block;position:relative;margin-bottom:55px;padding-bottom:40px;color:#fff;font-size:58px;}
+.subMainTop .slogan:after{display:block;content:'';position:absolute;bottom:0;left:0;width:37px;border-bottom:1px solid #fff;}
+.subMainTop .slogan em{color:#f2ffd6;}
+.subMainTop > p{font-size:16px;line-height:150%;color:#fff;}
+.subMainTop > p .title{display:block;margin-bottom:15px;font-size:25px;color:#fff;}
+.subMainTop .quick{position:absolute;top:34px;right:80px;width:630px;}
+.subMainTop .quick.col4{width:680px;}
+/* .subMainTop.bg3 .quick, */
+/* .subMainTop.bg4 .quick{top:90px;} */
+.subMainTop .quick li{float:left;display:block;margin-bottom:18px;width:33.3333%;}
+.subMainTop .quick.col4 li{width:25%;}
+.subMainTop .quick li a{display:block;text-align:center;font-size:18px;font-weight:600;line-height:145%;color:#fff;}
+.subMainTop .quick li span{display:block;margin:0 auto 10px;width:111px;height:111px;border-radius:55.5px;background-color:#8ebe2b;background-repeat:no-repeat;background-position:center top;}
+.subMainTop .quick li .icon1{background-image:url(../../images/keiti/sub/icon_subaMain_quick1.png);}
+.subMainTop .quick li .icon2{background-image:url(../../images/keiti/sub/icon_subaMain_quick2.png);}
+.subMainTop .quick li .icon3{background-image:url(../../images/keiti/sub/icon_subaMain_quick3.png);}
+.subMainTop .quick li .icon4{background-image:url(../../images/keiti/sub/icon_subaMain_quick4.png);}
+.subMainTop .quick li .icon5{background-image:url(../../images/keiti/sub/icon_subaMain_quick5.png);}
+.subMainTop .quick li .icon6{background-image:url(../../images/keiti/sub/icon_subaMain_quick6.png);}
+.subMainTop .quick li .icon7{background-image:url(../../images/keiti/sub/icon_subaMain_quick7.png);}
+.subMainTop .quick li .icon8{background-image:url(../../images/keiti/sub/icon_subaMain_quick8.png);}
+.subMainTop .quick li .icon9{background-image:url(../../images/keiti/sub/icon_subaMain_quick9.png);}
+.subMainTop .quick li .icon10{background-image:url(../../images/keiti/sub/icon_subaMain_quick10.png);}
+.subMainTop .quick li .icon11{background-image:url(../../images/keiti/sub/icon_subaMain_quick11.png);}
+.subMainTop .quick li .icon12{background-image:url(../../images/keiti/sub/icon_subaMain_quick12.png);}
+.subMainTop .quick li .icon13{background-image:url(../../images/keiti/sub/icon_subaMain_quick13.png);}
+.subMainTop .quick li .icon14{background-image:url(../../images/keiti/sub/icon_subaMain_quick14.png);}
+.subMainTop .quick li .icon15{background-image:url(../../images/keiti/sub/icon_subaMain_quick15.png);}
+.subMainTop .quick li .icon16{background-image:url(../../images/keiti/sub/icon_subaMain_quick16.png);}
+.subMainTop .quick li .icon17{background-image:url(../../images/keiti/sub/icon_subaMain_quick17.png);}
+.subMainTop .quick li .icon18{background-image:url(../../images/keiti/sub/icon_subaMain_quick18.png);}
+.subMainTop .quick li .icon19{background-image:url(../../images/keiti/sub/icon_subaMain_quick19.png);}
+.subMainTop .quick li .icon20{background-image:url(../../images/keiti/sub/icon_subaMain_quick20.png);}
+.subMainTop .quick li .icon21{background-image:url(../../images/keiti/sub/icon_subaMain_quick21.png);}
+.subMainTop .quick li .icon22{background-image:url(../../images/keiti/sub/icon_subaMain_quick22.png);}
+.subMainTop .quick li .icon23{background-image:url(../../images/keiti/sub/icon_subaMain_quick23.png);}
+.subMainTop .quick li .icon24{background-image:url(../../images/keiti/sub/icon_subaMain_quick24.png);}
+.subMainTop .quick li .icon25{background-image:url(../../images/keiti/sub/icon_subaMain_quick25.png);}
+.subMainTop .quick li .icon26{background-image:url(../../images/keiti/sub/icon_subaMain_quick26.png);}
+.subMainTop .quick li .icon27{background-image:url(../../images/keiti/sub/icon_subaMain_quick27.png);}
+.subMainTop .quick li .icon28{background-image:url(../../images/keiti/sub/icon_subaMain_quick28.png);}
+.subMainTop .quick li .icon29{background-image:url(../../images/keiti/sub/icon_subaMain_quick29_1.png);}
+.subMainTop .quick li a:hover span{background-color:#6b9c00;}
+.subMainCon > div{margin-bottom:30px;}
+.subMainCon .boxCol3{border-top:1px solid #ddd;border-left:1px solid #ddd;letter-spacing:-1px;}
+.subMainCon .boxCol3:after{display:block;content:'';clear:both;}
+.subMainCon .boxCol3 > div{float:left;width:33.3333%;box-sizing:border-box;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}
+.subMainCon .boxCol3 .row1{height:350px;}
+.subMainCon .boxCol3 .row2{height:580px;}
+.subMainCon .boxCol3 .row3{height:800px;}
+.subMainCon .boxCol3 .item1{position:relative;padding:42px 40px;background:#0c9897 url(../../images/keiti/sub/bg_subMainCon_item1.png) no-repeat 88% 82%;}
+.subMainCon .boxCol3 .item1.bg2{background:#0c9897 url(../../images/keiti/sub/bg_subMainCon_item1_2.png) no-repeat 88% 82%;}
+.subMainCon .boxCol3 .item1.bg3{background:#0c9897 url(../../images/keiti/sub/bg_subMainCon_item1_3.png) no-repeat 98% 88%;}
+.subMainCon .boxCol3 .item1.bg4{background:#0c9897 url(../../images/keiti/sub/bg_subMainCon_item1_4.png) no-repeat 88% 82%;}
+.subMainCon .boxCol3 .item1.bg5{background:#0c9897 url(../../images/keiti/sub/bg_subMainCon_item1_5.png) no-repeat 88% 82%;}
+.subMainCon .boxCol3 .item1 .title{display:block;margin-bottom:23px;font-size:36px;font-weight:600;color:#fff;}
+.subMainCon .boxCol3 .item1 p{color:#fff;font-size:16px;line-height:145%;}
+.subMainCon .boxCol3 .item1 .btnDetail{display:none;position:absolute;left:40px;bottom:42px;padding-left:18px;width:115px;height:38px;border:1px solid #fff;background:url(../../images/keiti/sub/icon_subMainBtnDetail.png) no-repeat 88% center;color:#fff;line-height:38px;}
+.subMainCon .boxCol3 .item1 .btnDetail:hover{background:#49a2a2 url(../../images/keiti/sub/icon_subMainBtnDetail.png) no-repeat 88% center;}
+.subMainCon .boxCol3 .item2{padding:60px 50px;}
+.subMainCon .boxCol3 .item2.row2{padding:40px 50px;}
+.subMainCon .boxCol3 .item2.bg{background:#f7f7f7;}
+.subMainCon .boxCol3 .item2 .title{display:block;margin-bottom:20px;height:70px;line-height:70px;font-size:22px;font-weight:600;text-align:center;color:#333;}
+.subMainCon .boxCol3 .item2 .title img{display:inline-block;vertical-align:middle;margin-right:28px;}
+.subMainCon .boxCol3 .item2 ul{border-bottom:1px solid #ccc;}
+.subMainCon .boxCol3 .item2 ul li{height:40px;}
+.subMainCon .boxCol3 .item2 ul li a{display:block;padding-left:18px;height:45px;box-sizing:border-box;background:#fff url(../../images/keiti/sub/icon_subMain_linkPlus.png) no-repeat 94% center;border:1px solid #ccc;line-height:43px;font-size:15px;color:#333;}
+.subMainCon .boxCol3 .item2 ul li a:hover{height:44px;border:1px solid #2669ad !important;line-height:43px;color:#2669ad;}
+.subMainCon .boxCol2{border-left:1px solid #ddd;}
+.subMainCon .boxCol2:after{display:block;content:'';clear:both;}
+.subMainCon .boxCol2 > div{float:left;padding:35px 45px;box-sizing:border-box;width:50%;border:1px solid #ddd;border-left:0px none;}
+.subMainCon .boxCol2 .item3{position:relative;height:302px;}
+.subMainCon .boxCol2 .item3 .title{display:block;margin-bottom:20px;padding-bottom:15px;border-bottom:1px solid #ccc;font-size:24px;color:#333;}
+.subMainCon .boxCol2 .item3 .noticeList{height:145px;overflow:hidden;}
+.subMainCon .boxCol2 .item3 .noticeList li{position:relative;display:block;padding:6px 135px 6px 0;}
+.subMainCon .boxCol2 .item3 .noticeList li:after{display:block;content:'';position:absolute;left:0;top:15px;width:2px;height:2px;background:#5d5d5d;}
+.subMainCon .boxCol2 .item3 .noticeList li a{display:block;position:relative;padding-left:10px;font-size:15px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;color:#333;}
+.subMainCon .boxCol2 .item3 .noticeList li a:hover{text-decoration:underline;}
+.subMainCon .boxCol2 .item3 .noticeList li .date{display:block;position:absolute;right:0;top:6px;color:#9a9a9a;font-size:15px;}
+.subMainCon .boxCol2 .item3 .btnMore{display:block;position:absolute;top:43px;right:45px;color:#555;}
+.subMainCon .boxCol2 .item3 .btnMore:hover{font-weight:600;}
+.subMainCon .item3 .subMainSlider1 .subject{display:block;margin-bottom:20px;font-size:20px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.subMainCon .item3 .subMainSlider1 .subject:hover{text-decoration:underline;}
+.subMainCon .item3 .subMainSlider1 li{margin-bottom:15px;line-height:23px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.subMainCon .item3 .subMainSlider1 li .label{display:inline-block;vertical-align:middle;margin-right:15px;width:78px;height:21px;border:1px solid #ccc;line-height:23px;text-align:center;}
+.subMainCon .item3 .subMainSlider1 .bx-prev{right:51px;background-image:url(../../images/keiti/main/icon_slider_prev.png);}
+.subMainCon .item3 .subMainSlider1 .bx-next{right:0px;background-image:url(../../images/keiti/main/icon_slider_next.png);}
+.subMainCon .item3 .subMainSlider1 .bx-controls a{display:block;position:absolute;bottom:0;width:50px;height:50px;background-color:#ccc;background-repeat:no-repeat;background-position:center center;text-indent:-9999em;}
+.subMainCon .item3 .subMainSlider1 .bx-controls a:hover{background-color:#9e9d9d;}
+.subMainCon .subMainSite{position:relative;margin-top:40px;padding-left:350px;}
+.subMainCon .subMainSite .title{display:block;position:absolute;left:10px;top:8px;font-size:26px;color:#333;}
+.subMainCon .subMainSite ul{margin:-5px;}
+.subMainCon .subMainSite ul li{display:block;float:left;padding:5px;width:25%;box-sizing:border-box;}
+.subMainCon .subMainSite ul li a{display:block;height:86px;border:1px solid #ccc;text-align:center;line-height:86px;}
+.subMainCon .subMainSite ul li a:hover{border:1px solid #2669ad;}
+.subMainCon .subMainSite ul li img{vertical-align:middle; max-width:95%;}
+.btnLinkGo{display:inline-block;vertical-align:middle;padding:0 20px 0 50px;box-sizing:border-box;height:36px;background:url(../../images/keiti/sub/icon_subTopGo.png) no-repeat 22px center;border:1px solid #2669ad;color:#10559a;font-size:15px;line-height:36px;}
+.sub2_2 .subMainCon .boxCol3 .row1{padding:40px 50px 35px;}
+.sub2_2 .subMainCon .boxCol3 .row2{height:568px;}
+.sub2_2 .subMainCon .boxCol3 .row3{height:658px;}
+.sub2_3 .subMainCon .boxCol3 .row1{padding:40px 50px;height:350px;}
+.sub2_3 .subMainCon .boxCol3 .row2{padding:40px 50px;height:480px;}
+.sub2_4 .subMainCon .boxCol3 > div{width:25%;}
+.sub2_4 .subMainCon .boxCol3 .row1{height:360px;}
+.sub2_4 .subMainCon .boxCol3 .item2{padding:60px 34px;}
+.subMainCon .boxCol3 .item2 .title em{display:inline-block;vertical-align:middle;line-height:130%;}
+.subTabInfo{margin-bottom:40px;padding:30px 50px;background:#f0f5fa;color:#195fa7;line-height:145%;font-size:17px;word-break:keep-all;}

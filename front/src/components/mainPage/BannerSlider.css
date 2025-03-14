@@ -1,0 +1,22 @@
+/* BannerSlider.css */
+.banner-slider {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    padding-bottom: 10px;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 400px; /* 슬라이더의 높이 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* 이미지가 없는 부분을 위한 배경색 */
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* 비율을 유지하면서 이미지가 슬라이더에 맞춰지도록 설정 */
+  }

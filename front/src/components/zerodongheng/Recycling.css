@@ -1,0 +1,46 @@
+/* Recycling 컴포넌트에만 적용되는 스타일 */
+.recycling-container .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.recycling-container .modal-content {
+    position: relative;
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.recycling-container .modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recycling-container .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.recycling-container .close-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ensure image cursor looks like a pointer when hovering */
+.recycling-container .recycling-content img {
+    cursor: pointer;
+}

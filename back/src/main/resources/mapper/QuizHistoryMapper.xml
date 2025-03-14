@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.JY.domain.dailyQuiz.QuizHistoryMapper">
+
+    <select id="QHMaxNum" resultType="int">
+        SELECT NVL(MAX(quizHistoryId), 0) FROM QUIZHISTORY
+    </select>
+
+    <insert 
+        id="insertQH" 
+        parameterType="com.zd.back.JY.domain.dailyQuiz.QuizHistoryDTO"
+    >
+        insert into QUIZHISTORY
+        (quizHistoryId, quizResult, quizDate, memId, quizid)
+        values
+        (#{quizHistoryId}, #{quizResult}, sysdate, #{memId}, #{quizid})
+    </insert>
+
+    <select id="checkToday" parameterType="String" 
+    resultType="int">
+            SELECT COUNT(*)
+            FROM QUIZHISTORY
+            WHERE TRUNC(quizDate) = TRUNC(SYSDATE)
+            AND memId = #{memId}
+    </select>
+
+</mapper>

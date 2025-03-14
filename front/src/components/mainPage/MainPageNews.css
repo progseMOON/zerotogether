@@ -1,0 +1,133 @@
+.board_tab_wrap {
+    position: relative;
+    flex: 1 1 calc(30% - 20px); /* 자유롭게 크기 조정 */
+    margin: 10px; /* 요소 간 간격 추가 */
+    background-color: #ffffff; /* 배경색 설정 (선택 사항) */
+    border-radius: 5px; /* 모서리 둥글게 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+    padding: 20px; /* 내부 패딩 추가 */
+    min-width: 250px; /* 최소 너비 설정 (필요에 따라 조정) */
+    width: 100%;
+    max-width: 700px; /* 최대 너비 설정 (필요에 따라 조정) */
+    height: 500px;
+}
+
+.board_view_btn {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.board_report_wrap {
+    width: 27%;
+    margin: 0 1.5%;
+    position: relative;
+}
+
+.banner_slide_wrap {
+    width: 27%;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 357px;
+    min-height: 270px;
+    font-size: 0;
+}
+
+.board_tab_wrap ul.tabs {
+    margin: 0 0 10px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    width: 100%;
+}
+
+.board_tab_wrap ul.tabs li {
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 0;
+    overflow: visible !important;
+    position: relative;
+
+}
+
+.board_tab_wrap ul.tabs li button {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 15px;
+    padding: 10px 20px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 20px;
+}
+
+.board_tab_wrap ul.tabs li button:hover {
+    background: #008000;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.board_tab_wrap ul.tabs li.active,
+.board_tab_wrap ul.tabs li.active a:hover,
+.board_tab_wrap ul.tabs li.active button{
+    border-radius: 25px;
+    background: #008000;
+    color: #fff;
+}
+
+.board_tab_wrap ul.tabs li.active a {
+    color: #fff;
+}
+
+.board_tab_wrap .tab_container {
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #f1f8f9;
+    border-radius: 15px;
+    min-height: 400px;
+}
+
+.board_tab_wrap .tab_content {
+    padding: 30px 30px;
+    box-sizing: border-box;
+}
+
+.board_tab_wrap .board_list li {
+    list-style: none;
+    margin-top: 15px;
+    position: relative;
+    overflow:visible !important;
+}
+
+.board_tab_wrap .board_list li a {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    display: block;
+    padding:5px;
+    padding-right: 120px;
+    color: #333;
+    font-size: 15px;
+}
+
+.board_tab_wrap .board_list li a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.board_tab_wrap .board_list li .board_date {
+    position: absolute;
+    font-size: 15px;
+    top: 0;
+    right: 0;
+}
+
+.board_tab_wrap .board_list li:first-child {
+    margin-top: 0;
+}

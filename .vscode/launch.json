@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MpspringApplication",
+            "request": "launch",
+            "mainClass": "com.mainpage.mpspring.MpspringApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BackApplication<back>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.zd.back.BackApplication",
+            "projectName": "back",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

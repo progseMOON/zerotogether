@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.seoulsmartmap.SmartMapMapper">
+
+
+    <select id="maxNum" resultType="int">
+        SELECT NVL(MAX(smartMapId), 0) FROM smartMap
+    </select>
+
+    <insert id="saveStore" parameterType="com.zd.back.seoulsmartmap.ThemaData">
+        INSERT INTO smartMap (smartMapId, name, coordx, coordy, telno, themename, guname, addrnew, addrold, openinghours, imgUrl, sales, link, instaUrl)
+        VALUES (#{smartMapId}, #{name}, #{coordX}, #{coordY}, #{telNo}, #{themeName}, #{guName}, #{addrNew}, #{addrOld}, #{openingHours}, #{imgUrl}, #{sales}, #{link}, #{instaUrl})
+    </insert>
+
+    <select id="allStore" resultType="com.zd.back.seoulsmartmap.ThemaData">
+        SELECT * FROM smartMap
+    </select>
+
+    <select id="findByNameAndTelNo" resultType="com.zd.back.seoulsmartmap.ThemaData">
+        SELECT *
+        FROM smartMap
+        WHERE name = #{name} AND telNo = #{telNo}
+    </select>
+
+</mapper>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.board.mapper.BoardMapper">
+
+	<insert id="insertBoard" parameterType="com.zd.back.board.model.Board">
+	    <selectKey keyProperty="boardno" resultType="int" order="BEFORE">
+        SELECT tip_boardno.NEXTVAL FROM dual
+    	</selectKey>
+		INSERT into tipboard (boardno, memId, ref, step, depth, title, content, category, hitcount, del)
+		VALUES (#{boardno}, #{memId}, (SELECT NVL(MAX(ref), 0) + 1 FROM tipboard), 0, 0, #{title}, #{content}, #{category}, 0, 0)
+	</insert>
+
+	<!-- 글 목록 조회 -->
+	<select id="getBbsSearchPageList" parameterType="com.zd.back.board.model.param.BoardParam" resultType="com.zd.back.board.model.Board">
+		SELECT 
+			a.boardno, a.memId, a.ref, a.step, a.depth, a.title, a.content, a.category, a.hitcount, a.del, a.created, a.saveFileName, a.originalFileName, a.urlFile,
+			(SELECT COUNT(*) FROM tipcomment WHERE boardno = a.boardno AND del = 0) AS commentCount 
+		FROM (
+			SELECT 
+				row_number() OVER(ORDER BY ref DESC, step ASC) AS rnum,
+				boardno, memId, ref, step, depth, title, content, category, hitcount, del, created, saveFileName, originalFileName, urlFile
+			FROM 
+				tipboard
+			<where>
+				<if test="category != null and category != ''">
+					category = #{category}
+				</if>
+				<if test="choice != null and choice != '' and search != null and search != ''">
+					<if test="choice == 'title'">
+						AND title LIKE '%' || #{search} || '%'
+					</if>
+					<if test="choice == 'content'">
+						AND content LIKE '%' || #{search} || '%'
+					</if>
+					<if test="choice == 'writer'">
+						AND memId = #{search}
+					</if>
+				</if>
+				<if test="memId != null and memId != ''">
+					AND memId = #{memId} <!-- 작성자 필터 추가 -->
+				</if>
+			</where>
+			ORDER BY ref DESC, step ASC
+		) a
+		WHERE a.rnum BETWEEN #{pageStart} AND #{pageEnd}
+	</select>
+
+
+
+	<!-- 글 총 개수 조회 -->
+	<select id="getBbsCount" parameterType="com.zd.back.board.model.param.BoardParam" resultType="int">
+		SELECT NVL(count(*), 0)
+		FROM tipboard
+		<where>
+			<if test="category != null and category != ''">
+				category = #{category}
+			</if>
+			<if test="choice != null and choice != '' and search != null and search != ''">
+				<if test="choice == 'title'">
+					AND title LIKE '%' || #{search} || '%'
+				</if>
+				<if test="choice == 'content'">
+					AND content LIKE '%' || #{search} || '%'
+				</if>
+				<if test="choice == 'writer'">
+					AND memId = #{search}
+				</if>
+			</if>
+			<if test="memId != null and memId != ''">
+				AND memId = #{memId} <!-- 작성자 필터 추가 -->
+			</if>
+		</where>
+	</select>
+
+
+	<!-- 특정 게시글 조회 -->
+	<select id="getBoard" parameterType="int" resultType="com.zd.back.board.model.Board">
+		SELECT boardno, memId, ref, step, depth, title, content, category, hitcount, del, created, saveFileName, originalFileName, urlFile
+		FROM tipboard
+		WHERE boardno=#{boardno}
+		ORDER BY ref DESC, step ASC
+	</select>
+
+	<!-- 게시글 조회수 레코드 생성 : 동일한 boardno, memId 조합의 레코드가 이미 존재하는 경우, 
+	latest 값을 현재 시간으로 업데이트 -->
+	<insert id="createBbsReadCountHistory" parameterType="com.zd.back.board.model.param.BoardParam">
+		MERGE INTO readhistory target
+		USING (SELECT #{bbsno} AS boardno, #{readerId} AS memId FROM dual) source
+		ON (target.boardno = source.boardno AND target.memId = source.memId)
+		WHEN NOT MATCHED THEN
+			INSERT (boardno, memId)
+			VALUES (#{bbsno}, #{readerId})
+	</insert>
+
+	<!-- 게시글 조회수 수정 -->
+	<update id="increaseBbsReadCount" parameterType="int">
+		UPDATE tipboard
+		SET hitcount = hitcount + 1
+		WHERE boardno = #{boardno}
+	</update>
+
+	<!-- 게시글 수정 -->
+	<!-- 수정 성공 시 1(수정한 레코드 개수) 을 반환, 실패 시 0 을 반환 -->
+	<update id="updateBoard" parameterType="com.zd.back.board.model.param.BoardParam">
+		UPDATE tipboard
+		SET content=#{content}, title=#{title}
+		WHERE boardno=#{boardno}
+	</update>
+
+	<!-- 게시글 삭제 -->
+	<update id="deleteBoard" parameterType="int">
+		UPDATE tipboard
+		SET del = 1, category = NULL, title = '삭제된 게시물입니다.', content = '삭제된 게시물입니다.'
+		WHERE boardno=#{boardno}
+	</update>
+
+
+	<!-- 답글 작성 -->
+	<!-- 부모 게시글 step 업데이트 -->
+	<update id="updateBbsStep" parameterType="int">
+		UPDATE tipboard
+		SET step = step + 1
+		WHERE ref = (SELECT ref FROM tipboard WHERE boardno = #{parentno})
+		AND step > (SELECT step FROM tipboard WHERE boardno = #{parentno})
+	</update>
+
+	<!-- 답글 category 부모 게시글의 category로 지정 -->
+	<select id="getCategoryByBoardno" parameterType="int" resultType="string">
+		SELECT category
+		FROM tipboard
+		WHERE boardno = #{parentno}
+	</select>
+
+	<!-- 부모 게시글 하위 답글 개수 조회 (step 업데이트 성공 여부 확인 휘함) -->
+	<select id="getBbsAnswerCount" parameterType="int" resultType="int">
+		WITH ParentData AS (
+			SELECT ref, step FROM tipboard WHERE boardno = #{parentno}
+		)
+		SELECT COUNT(*)
+		FROM tipboard
+		WHERE ref = (SELECT ref FROM ParentData)
+		AND step > (SELECT step FROM ParentData)
+	</select>
+
+	<!-- 새로운 답글 추가 -->
+	<insert id="createBbsAnswer" parameterType="com.zd.back.board.model.param.BoardParam">
+		<selectKey keyProperty="boardno" resultType="int" order="BEFORE">
+			SELECT tip_boardno.NEXTVAL FROM dual
+		</selectKey>
+		INSERT INTO tipboard (boardno, memId, ref, step, depth, title, content, category, hitcount, del)
+		VALUES (#{boardno}, #{memId},
+			(SELECT ref FROM tipboard WHERE boardno = #{parentno}),
+			(SELECT step FROM tipboard WHERE boardno = #{parentno}) + 1,
+			(SELECT depth FROM tipboard WHERE boardno = #{parentno}) + 1,
+			#{title}, #{content}, #{category}, 0, 0)
+	</insert>
+
+	<update id="updateFileDetails" parameterType="Board">
+		UPDATE tipboard
+		SET saveFileName = #{saveFileName},
+			originalFileName = #{originalFileName},
+			urlFile = #{urlFile}
+		WHERE boardno = #{boardno}
+	</update>
+
+	<select id="findMaxBoardNo" resultType="int">
+        SELECT COALESCE(MAX(boardno), 0) FROM tipBoard
+    </select>
+
+</mapper>

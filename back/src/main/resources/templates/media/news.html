@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+</head>
+<body>
+    <h1>네이버 뉴스 결과</h1>
+    <div>
+        <pre>${newsData}</pre> <!-- 응답 데이터 출력 -->
+    </div>
+
+    <div>
+        <p th:if="${error}">에러 발생: <span th:text="${error}"></span></p>
+    </div>
+</body>
+</html>

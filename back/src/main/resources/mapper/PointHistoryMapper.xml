@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zd.back.JY.domain.point.PointHistoryMapper">
+    <insert id="insertPointHistory" parameterType="com.zd.back.JY.domain.point.PointHistoryDTO">
+        INSERT INTO point_history (history_id, mem_id, point_change, change_reason, change_date)
+        VALUES (point_history_seq.NEXTVAL, #{memId}, #{pointChange}, #{changeReason}, #{changeDate})
+    </insert>
+
+    <select id="getPointHistoryByMemId" resultType="com.zd.back.JY.domain.point.PointHistoryDTO">
+        SELECT * FROM point_history WHERE mem_id = #{memId} ORDER BY change_date DESC
+    </select>
+
+    <delete id="deleteByMemId" parameterType="string">
+        DELETE FROM point_history WHERE mem_id = #{memId}
+    </delete>
+
+    <select id="getPointHistoryPaged" resultType="com.zd.back.JY.domain.point.PointHistoryDTO">
+        SELECT * FROM (
+            SELECT a.*, ROWNUM rn
+            FROM (
+                SELECT * FROM point_history
+                WHERE mem_id = #{memId}
+                ORDER BY change_date DESC
+            ) a
+            WHERE ROWNUM &lt;= #{offset} + #{size}
+        )
+        WHERE rn > #{offset}
+    </select>
+
+    <select id="countPointHistory" resultType="long">
+        SELECT COUNT(*) FROM point_history WHERE mem_id = #{memId}
+    </select>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.organization.OrgMapper">
+
+    <select id="selectAll" resultType="com.zd.back.organization.OrgData">
+        Select * from organization
+    </select>
+
+    <select id="selectGlobalOrg" resultType="com.zd.back.organization.GlobalOrgData">
+        Select * from globalorg
+    </select>
+
+    <insert id="insertOrg" parameterType="com.zd.back.organization.OrgData">
+        INSERT INTO organization (orgId, location, name, description, imgUrl, link)
+        Values (#{orgId}, #{location}, #{name}, #{description}, #{imgUrl}, #{link})
+    </insert>
+
+    <select id="selectByName" parameterType="String" resultType="com.zd.back.organization.OrgData">
+        SELECT * FROM organization WHERE name = #{name}
+    </select>
+
+    <select id="maxNum" resultType="int">
+        SELECT NVL(MAX(orgid), 0) FROM organization
+    </select>
+
+</mapper>

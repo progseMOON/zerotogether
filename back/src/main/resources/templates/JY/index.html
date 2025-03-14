@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<script type="text/javascript">
+    const sendIt =()=> {
+        f=document.myForm;
+
+        
+
+        f.action="/result.action";
+        f.submit();
+    }
+</script>
+</head>
+<body>
+    <div>
+        <form action="" method="post" name="myForm">
+            <div>
+                <ul>
+                    <li><a href="/signup.action">등록</a></li>
+                    <li><a href="/find.action">검색(id)</a></li>
+                    <li><a href="/manage.action">포인트 적용</a></li>
+                </ul>
+            </div>
+        </form>
+        <div>
+            <input type="button" onclick="sendIt()" value="확인"></input> 
+        </div>
+    </div>
+
+</body>
+</html>

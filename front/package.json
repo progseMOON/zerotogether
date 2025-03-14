@@ -1,0 +1,72 @@
+{
+  "name": "front",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8080",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@heroicons/react": "^2.1.5",
+    "@nextui-org/react": "^2.4.8",
+    "@portone/browser-sdk": "^0.0.10",
+    "@react-google-maps/api": "^2.20.3",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "data-fns": "^1.1.0",
+    "date-fns": "^4.1.0",
+    "jwt-decode": "^4.0.0",
+    "quill": "^2.0.0-dev.4",
+    "quill-image-resize-module-react": "^3.0.0",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
+    "react-calendar": "^5.1.0",
+    "react-dom": "^18.3.1",
+    "react-emoji-render": "^2.0.1",
+    "react-js-pagination": "^3.0.3",
+    "react-modal": "^3.16.1",
+    "react-paginate": "^8.2.0",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.26.2",
+    "react-scripts": "5.0.1",
+    "react-youtube": "^10.1.0",
+    "styled-components": "^6.1.13",
+    "swiper": "^11.1.14",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start:mac": "HTTPS=true SSL_CRT_FILE=cert/localhost.pem SSL_KEY_FILE=cert/localhost-key.pem npm run start",
+    "start:windows": "set HTTPS=true&&set SSL_CRT_FILE=cert/localhost.pem&&set SSL_KEY_FILE=cert/localhost-key.pem&&npm run start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}

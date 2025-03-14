@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.JY.domain.point.PointMapper">
+
+    <select id="maxNum" resultType="int">
+        SELECT NVL(MAX(pointId), 0) FROM point
+    </select>
+
+
+    <insert id="insertData" parameterType="com.zd.back.JY.domain.point.PointDTO">
+    INSERT INTO point (pointId, maxPoint, usedPoint, memId, grade)
+    VALUES (#{pointId}, #{maxPoint}, #{usedPoint}, #{memId}, #{grade})
+    </insert>
+
+    <update id="updatePoint" parameterType="com.zd.back.JY.domain.point.PointDTO">
+    UPDATE point
+    SET usedPoint = #{usedPoint}, maxPoint = #{maxPoint}, grade = #{grade}
+    WHERE pointId = #{pointId}
+    </update>
+
+    <select id="findById" parameterType="String" resultType="com.zd.back.JY.domain.point.PointDTO">
+    SELECT pointId, usedPoint, maxPoint, memId, grade
+    FROM point
+    WHERE memId = #{memId}
+    </select>
+
+    <select id="findByMemId" parameterType="String" resultType="com.zd.back.JY.domain.point.PointDTO">
+    SELECT pointId, usedPoint, maxPoint, memId, grade
+    FROM point
+    WHERE memId = #{memId}
+    </select>
+
+    <delete id="deleteByMemId" parameterType="string">
+    DELETE FROM point WHERE memId = #{memId}
+    </delete>
+
+</mapper>

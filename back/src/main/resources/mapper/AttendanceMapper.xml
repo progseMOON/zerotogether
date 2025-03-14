@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.JY.domain.attendance.AttendanceMapper">
+
+    <select id="maxNum" resultType="int">
+        SELECT NVL(MAX(attId), 0) FROM attendance
+    </select>
+
+    <!-- 변경: attId 제거 -->
+    <insert id="insertAtt" parameterType="map">
+        INSERT INTO attendance (attDate, memId)
+        VALUES (SYSTIMESTAMP, #{memId})
+    </insert>
+
+    <select id="checkToday" parameterType="String" resultType="int">
+        SELECT COUNT(*) FROM attendance
+        WHERE TRUNC(attDate) = TRUNC(SYSDATE)
+        AND memId = #{memId}
+    </select>
+
+    <insert id="regiAtt" parameterType="com.zd.back.JY.domain.attendance.AttendanceDTO">
+        INSERT INTO attendance (attId, attDate, memId)
+        VALUES (#{attId}, TRUNC(SYSDATE), #{memId})
+    </insert>
+
+    <select id="getMonthlyAttendance" resultType="com.zd.back.JY.domain.attendance.AttendanceDTO">
+        SELECT * FROM attendance
+        WHERE memId = #{memId}
+        AND EXTRACT(YEAR FROM attDate) = #{year}
+        AND EXTRACT(MONTH FROM attDate) = #{month}
+    </select>
+
+    <select id="getAttendanceDates" parameterType="string" resultType="java.util.Date">
+        SELECT TRUNC(attDate) FROM attendance WHERE memId = #{memId}
+    </select>
+
+    <select id="selectAttList" resultType="java.util.Map">
+        SELECT * FROM attendance WHERE memId = #{memId} ORDER BY attDate DESC
+    </select>
+
+    <select id="countMonthlyAttendance" resultType="int">
+        SELECT COUNT(*) FROM attendance
+        WHERE memId = #{memId}
+        AND TO_CHAR(attDate, 'YYYY-MM') = TO_CHAR(SYSDATE, 'YYYY-MM')
+    </select>
+
+    <delete id="deleteByMemId" parameterType="string">
+    DELETE FROM attendance WHERE memId = #{memId}
+    </delete>
+
+</mapper>

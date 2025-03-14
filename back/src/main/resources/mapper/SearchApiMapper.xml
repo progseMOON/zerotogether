@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.naversearchapi.mapper.SearchApiMapper">
+    <select id="maxNum" resultType="int">
+        SELECT NVL(MAX(naverId), 0) FROM naverNews
+    </select>
+
+    <insert id="insertNews" parameterType="com.zd.back.naversearchapi.model.News">
+        INSERT INTO naverNews (naverId, title, link, description, pubDate)
+        VALUES (#{naverId}, #{title}, #{link}, #{description}, #{pubDate})
+    </insert>
+
+    <select id="selectNewsByTitle" parameterType="String" resultType="com.zd.back.naversearchapi.model.News">
+        SELECT * FROM naverNews WHERE title = #{title}
+    </select>
+
+    <!-- DB에서 모든 뉴스 데이터를 가져오기 -->
+    <select id="selectAllNews" resultType="com.zd.back.naversearchapi.model.News">
+        SELECT * FROM naverNews order by pubDate desc
+    </select>
+
+    <!-- DB에서 검색한 뉴스 데이터를 가져오기 -->
+    <select id="searchNews" parameterType="String" resultType="News">
+        SELECT * FROM naverNews WHERE title LIKE '%' || #{keyword} || '%' OR description LIKE '%' || #{keyword} || '%'
+    </select>
+
+    <!-- 메인화면에 표시될 최신 10개의 뉴스 데이터 가져오기 -->
+    <select id="miniNews" resultType="com.zd.back.naversearchapi.model.News">
+        select * from (SELECT * FROM naverNews ORDER BY pubDate DESC) where rownum &lt;=6
+    </select>
+
+</mapper>

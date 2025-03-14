@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+
+    <script>
+        const sendIt = () => {
+            f= document.myForm;
+
+            str=f.memId.value;
+            if(!str){
+                alert("유져아이디를 입력하세요")
+                f.memId.focus();
+                return;
+            }
+
+
+            f.action="/signup_ok";
+            f.submit();
+        }
+
+    </script>
+
+</head>
+<body>
+    <form action="" method="post" name="myForm">
+        <div>
+            <span>유져 아이디</span>
+            <input type="text" name="memId" placeholder="유저 아이디 입력">
+            <div>
+                <input type="button" onclick="sendIt()" value="생성"/>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,90 @@
+.mini_login_wrap {
+    flex: 1 1 calc(30% - 20px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 250px;
+    max-width: 500px;
+    height: 200px;
+    max-height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mini_login_wrap h5 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.mini_login_wrap .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.mini_login_wrap .button-group .btn-link {
+    padding: 6px 10px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #008000;
+    border: none; /* 테두리 제거 */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.mini_login_wrap .button-group .btn-link:hover {
+    background-color: #008000;
+    color: white;
+}
+
+.mini_login_wrap .button-group button {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: none; /* 테두리 제거 */
+    outline: none; /* 외곽선 제거 */
+}
+
+.mini_login_wrap .button-group button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.mini_login_wrap .button-group button span {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.mini_login_wrap .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.mini_login_wrap .modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.btn {
+    color: #ffffff !important;
+    background-color: #008000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    border: none; /* 테두리 제거 */
+    outline: none; /* 외곽선 제거 */
+}

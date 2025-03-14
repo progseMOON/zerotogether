@@ -1,0 +1,91 @@
+<header id="header" class="temp_header_skin1">
+    <div class="header_con">
+        <!-- 로고 및 주소 -->
+        <h1>
+            <a href="/" class="first_btn">
+                <img src="/resources/img/common/top_logo.png" alt="{{prjName}}">
+            </a>
+            <div>
+                <p><span>주소</span> 서울 금천구 가산디지털1로 25 대륭테크노타운17차 907호</p>
+                <p><span>문의</span> visualline@hummingvl.co.kr</p>
+            </div>
+        </h1>
+
+        <!-- 주 메뉴 (gnb) -->
+        <nav class="gnb">
+            <ul class="gnb_depth_1">
+                <li>
+                    <a href="javascript:;" data-href="/pages/portfolio.php" name="depth1_0"><strong>Portfolio</strong></a>
+                    <div class="gnb_depth_2" style="display: none;">
+                        <ul>
+                            <li><a href="javascript:;" data-href="/pages/portfolio_01.php">디지털 트윈</a></li>
+                            <li><a href="javascript:;" data-href="/pages/portfolio_02.php">3D 콘텐츠</a></li>
+                            <li><a href="javascript:;" data-href="/pages/portfolio_03.php">3D 에셋</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" data-href="/pages/business_01.php" name="depth1_1"><strong>Business</strong></a>
+                    <div class="gnb_depth_2" style="display: none;">
+                        <ul>
+                            <li><a href="javascript:;" data-href="/pages/business_01.php">3D 디지털 트윈</a></li>
+                            <li><a href="javascript:;" data-href="/pages/business_02.php">문화재 3D 디지털 트윈 트랜스포메이션</a></li>
+                            <li><a href="javascript:;" data-href="/pages/business_03.php">3D 건축 시각화</a></li>
+                            <li><a href="javascript:;" data-href="/pages/business_04.php">3D VR</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" data-href="/pages/company_01.php" name="depth1_2"><strong>Company</strong></a>
+                    <div class="gnb_depth_2" style="display: none;">
+                        <ul>
+                            <li><a href="javascript:;" data-href="/pages/company_01.php" class="current">회사소개</a></li>
+                            <li><a href="javascript:;" data-href="/pages/company_02.php">연혁</a></li>
+                            <li><a href="javascript:;" data-href="/pages/company_03.php">찾아오시는길</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" data-href="/pages/news_01.php" name="depth1_3"><strong>News</strong></a>
+                    <div class="gnb_depth_2" style="display: none;">
+                        <ul>
+                            <li><a href="javascript:;" data-href="/pages/news_01.php">회사활동</a></li>
+                            <li><a href="javascript:;" data-href="/pages/news_02.php">뉴스</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" data-href="/pages/contact.php" name="depth1_4"><strong>Contact us</strong></a>
+                    <div class="gnb_depth_2" style="display: none;">
+                        <ul>
+                            <li><a href="javascript:;" data-href="/pages/contact.php">프로젝트 문의</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 유틸리티 메뉴 및 소셜 링크 -->
+        <div class="header_util">
+            <div class="sns_box">
+                <a href="javascript:alert('준비중입니다.')" title="카카오채널">
+                    <img src="/resources/img/common/icon_kakao.png" alt="카카오채널">
+                </a>
+                <a href="https://www.youtube.com/@HummingDX-q3v" target="_blank" title="유튜브">
+                    <img src="/resources/img/common/icon_youtube.png" alt="유튜브">
+                </a>
+                <a href="javascript:alert('준비중입니다.')" title="인스타">
+                    <img src="/resources/img/common/icon_insta.png" alt="인스타">
+                </a>
+            </div>
+            <div class="util_menu">
+                <a href="javascript:;" id="mGnbBtn" class="btn">
+                    <div class="hamburger_icon">
+                        <i></i> <i></i> <i></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</header>

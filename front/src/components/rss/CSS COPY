@@ -1,0 +1,47 @@
+/* post-lst */
+.post-lst{ border-top:#222 1px solid; }
+.post-lst > div:last-child{ border-bottom:#222 1px solid;}
+.post-lst > div.no-txt{  padding:55px 0; }
+.post-lst > div.no-txt strong{ display:block;text-align:center; font-weight:400; font-size:20px; color:#222}
+.post-lst > div.no-txt strong:before{ content:""; display:block; margin:0 auto 20px; width:88px; height:88px; background:url('../images/search/ico_exc.png') no-repeat 0 0; }
+.post-lst > div.no-txt p{text-align:center;  color:#747474; font-size:16px; margin-top:15px;}
+.post-lst .tagDiv{ padding-top:20px;}
+.post-lst .tagDiv ul li {list-style:none !important; margin-left:0;}
+
+/* post-lst-thumbnail */
+.post-lst-thumbnail {border-top: 2px solid #222;padding: 15px 0 30px;border-bottom: 1px solid #cfcfcf;overflow: hidden;}
+.post-lst-thumbnail .search-dummy {border-bottom: 0;overflow: hidden;}
+.post-lst-thumbnail .child_policyDL {float: left;width: 32%;margin-left: 2%;padding: 0;border: 1px solid #cfcfcf}
+.post-lst-thumbnail .child_policyDL:last-child {border-bottom: 1px solid #cfcfcf;}
+.post-lst-thumbnail .child_policyDL:nth-child(3n+1) {margin-left: 0;clear: both;}
+.post-lst-thumbnail .child_policyDL_l {display: block;width: 100%;}
+.post-lst-thumbnail .child_policyDL_l a img {width: 100%;max-width: 290px;height: auto;padding-right: 0;}
+.post-lst-thumbnail .child_policyDL_R {display: block;width: 100%;padding: 0 20px;margin: 20px 0 0;box-sizing: border-box;}
+.post-lst-thumbnail .child_policyDL_R .time .part,
+.post-lst-thumbnail .child_policyDL_R .topicCont,
+.post-lst-thumbnail .child_policyDL_R .tagDiv{display: none;}
+
+/* 2017-02-07 html5 변경 후 새소식내 스타일 추가 */
+.sub_centent_mainnews .ct_text {padding-right:0 !important;}
+.sub_centent_mainnews .n1-search-input-box-wrap {margin-left:330px;}
+/*.sub_centent_mainnews .child_policyDL_l + .child_policyDL_R {width:809px;}*/
+.sub_centent_mainnews .child_policyDL {width:100%; display:table; table-layout:fixed;}
+.sub_centent_mainnews .child_policyDL > *{ display:table-cell; vertical-align:top;}
+.sub_centent_mainnews .child_policyDL_R .topicCont {width:100%;}
+.sub_centent_mainnews .child_policyDL_R .topicCont_1 {width:100%;}
+.sub_centent_mainnews .child_policyDL_R h3 a{ color:#222; font-size:20px;}
+.sub_centent_mainnews  .ct_text .tagDiv ul li {margin-left:0 !important; list-style:none !important;}
+/*
+.wp-pagenavi {margin:0; padding:30px 0;}
+.wp-pagenavi .jump {padding:3px 2px; min-width:20px; width:auto !important;}
+*/
+
+/* 2017-02-14 게시판 공지 스타일 추가 */
+.type-notice-list .txt-blue, .txt-blue {color: #3399cc}
+.type-notice-list .txt-red, .txt-red {color: #c91705}
+.type-notice-content {margin: 10px 0;padding: 10px;border: 1px dotted #ccc;background-color: #f9f9f9;}
+
+/* @supports (-moz-appearance:none) and (display:contents) {
+    iframe.support-firefox {width: 705px !important;height: 395px !important}
+
+} */

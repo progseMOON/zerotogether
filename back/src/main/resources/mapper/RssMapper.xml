@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.rssenv.RssMapper">
+    <insert id="insertRssItem" parameterType="com.zd.back.rssenv.RssItem">
+        INSERT INTO rssItems (rssId, title, description, link, author, pubdate)
+        VALUES (#{rssId}, #{title}, #{description}, #{link}, #{author}, #{pubDate})
+    </insert>
+
+    <select id="selectByTitle" parameterType="String" resultType="com.zd.back.rssenv.RssItem">
+        SELECT * FROM rssItems WHERE title = #{title}
+    </select>
+
+    <select id="selectAll" resultType="com.zd.back.rssenv.RssItem">
+        SELECT * FROM rssItems order by rssId DESC
+    </select>
+
+    <select id="selectMini" resultType="com.zd.back.rssenv.RssItem">
+        select * from rssItems where rownum &lt;=6
+    </select>
+
+    <select id="maxRssId" resultType="int">
+        SELECT NVL(MAX(rssId), 0) FROM rssItems
+    </select>
+
+    <select id="selectByRssId" parameterType="int" resultType="com.zd.back.rssenv.RssItem">
+        select * from rssItems where rssId = #{rssId}
+    </select>
+
+    <!-- 이전글 가져오기 -->
+    <select id="selectPreviousNews" parameterType="int" resultType="com.zd.back.rssenv.RssItem">
+        SELECT * FROM (
+            SELECT *
+            FROM rssItems
+            WHERE rssId &lt; #{rssId}
+            ORDER BY rssId DESC
+        ) WHERE ROWNUM = 1
+    </select>
+
+    <!-- 다음글 가져오기 -->
+    <select id="selectNextNews" parameterType="int" resultType="com.zd.back.rssenv.RssItem">
+        SELECT * FROM (
+            SELECT *
+            FROM rssItems
+            WHERE rssId &gt; #{rssId}
+            ORDER BY rssId ASC
+        ) WHERE ROWNUM = 1
+    </select>
+
+</mapper>

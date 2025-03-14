@@ -1,0 +1,286 @@
+.seoul_container {
+    width: 100%;
+    display: flex;
+    padding: 20px 10px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* 수평 중앙 정렬 */
+}
+.seoul_container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: black;
+}
+  
+  .seoul-tab-bar {
+
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .seoul_tab_btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 0.6em;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  
+    &:hover{
+      box-shadow: 0 0 40px 40px gray inset;
+    }
+        
+    &:focus {
+      color: white;
+      background-color: green;
+      outline: 0;
+    }
+  }
+
+  .seoul_tab_btn.active {
+    background-color: green;
+    color: white;
+  }
+
+  .seoul_tab_btn.active-env {
+    background-color: #ff9800;
+    color: white;
+  }
+
+  .seoul_tab_btn.active-eco {
+    background-color: #8bc34a;
+    color: white;
+  }
+
+  .seoul_tab_btn.active-air {
+    background-color: #2196f3;
+    color: white;
+  }
+
+  .seoul_tab_btn.active-green {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  .seoul-search-line {
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  .seoul-search-line ul {
+    margin: 0;
+  }
+
+  .search-box select {
+    height: 30px;
+    margin: 0 5px 0;
+  }
+
+  .search-box input {
+    margin: 0 5px 0;
+  }
+
+  /* NewsStyles.css */
+
+.NewsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.NewsHeader {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.NewsListContainer {
+  list-style-type: none;
+  padding: 0;
+  width: 1000px;
+}
+
+.NewsItem {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.NewsItem a{
+  text-decoration : none;
+}
+
+.NewsGroup {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  max-width: 100px;
+  max-height: 40px;
+  left: 0;
+  top: 0;
+  margin-bottom: 10px;
+}
+
+.NewsGroup.env {
+  background-color: #ff9800; /* 기후환경 색상 */
+}
+
+.NewsGroup.eco {
+  background-color: #8bc34a; /* 친환경 색상 */
+}
+
+.NewsGroup.air {
+  background-color: #2196f3; /* 공기 색상 */
+}
+
+.NewsGroup.green {
+  background-color: #4caf50; /* 그린에너지 색상 */
+}
+
+.NewsGroup.default {
+  background-color: #9e9e9e; /* 기타 색상 */
+}
+
+
+.NewsItem:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.NewsLink {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.NewsLink:hover {
+  color: #3498db;
+}
+
+.NewsDescription {
+  color: #7f8c8d;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.NewsDate {
+  color: #95a5a6;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 5px;
+}
+
+
+.PaginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.PageButton {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #f1f1f1;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.PageButton.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.PageButton:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.PaginationButton {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #f1f1f1;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.PaginationButton:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.PaginationButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.ModalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ModalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90vw;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.CloseButton {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.NewsTitle {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

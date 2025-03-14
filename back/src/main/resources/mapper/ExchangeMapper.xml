@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zd.back.exchange.mapper.ExchangeMapper">
+
+    <select id="maxExchangeId" resultType="int">
+        SELECT NVL(MAX(exchangeId), 0) FROM exchange
+    </select>
+
+    <insert id="createdExchange" parameterType="com.zd.back.exchange.model.Exchange">
+        INSERT INTO exchange (exchangeId, memId, title, sender, receiver, content, addr1, addr2, post, tel,created,selec)
+        VALUES (#{exchangeId}, #{memId}, #{title}, #{sender}, #{receiver}, #{content}, #{addr1}, #{addr2}, #{post}, #{tel}, SYSDATE,#{selec})
+    </insert>
+
+
+
+    <select id="getExchanges" resultType="com.zd.back.exchange.model.Exchange">
+        SELECT exchangeId, memId, title, created, auth
+        FROM exchange
+        WHERE exchangeId BETWEEN #{pageStart} AND #{pageEnd}
+        ORDER BY exchangeId desc
+    </select>
+
+    <select id="getDataCount" resultType="int">
+        SELECT COUNT(*) FROM exchange
+    </select>
+
+
+    <select id="getExArticle" parameterType="int" resultType="com.zd.back.exchange.model.Exchange">
+        SELECT * FROM exchange WHERE exchangeId = #{exchangeId}
+    </select>
+
+    <delete id="deleteExchange" parameterType="int">
+        DELETE FROM exchange WHERE exchangeId = #{exchangeId}
+    </delete>
+
+    <update id="updateAuth" parameterType="int">
+        UPDATE exchange
+        SET auth = 1,
+            authDate = CURRENT_TIMESTAMP
+        WHERE exchangeId = #{exchangeId}
+    </update>
+
+    <delete id="deleteExchangesByMemberId" parameterType="string">
+        DELETE FROM exchange WHERE memId = #{memId}
+    </delete>
+
+</mapper>

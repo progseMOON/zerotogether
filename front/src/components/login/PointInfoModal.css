@@ -1,0 +1,78 @@
+/* PointInfoModal.css */
+
+.point-info-modal .modal-content {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.point-info-modal .modal-header {
+    background-color: #008000;
+    color: white;
+    border-bottom: none;
+}
+
+.point-info-modal .modal-title {
+    font-weight: bold;
+}
+
+.point-info-modal .modal-body {
+    padding: 20px;
+}
+
+.point-info-modal .table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.point-info-modal .table th {
+    background-color: #008000;
+    color: white;
+    padding: 10px;
+}
+
+.point-info-modal .table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.point-info-modal .pagination {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.point-info-modal .pagination .page-item .page-link {
+    color: #008000;
+    border-color: #008000;
+}
+
+.point-info-modal .pagination .page-item.active .page-link {
+    background-color: #008000;
+    border-color: #008000;
+    color: white;
+}
+
+.point-info-modal .btn-secondary {
+    background-color: #008000;
+    border-color: #008000;
+}
+
+.point-info-modal .btn-secondary:hover {
+    background-color: #029745;
+    border-color: #029745;
+}
+
+.point-info-modal p {
+    margin-bottom: 10px;
+}
+
+.point-info-modal h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.notice-modal-custom-width .modal-dialog {
+    max-width: 1000px;
+    width: 100%;
+  }
+
