@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 
-//수정시 파일 업로드 부분 제외하고 text만 되도록 함 
 
 
 @RestController
